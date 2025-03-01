@@ -11,7 +11,7 @@ export const clashBold = localFont({
 });
 
 export const gilroyExtraBold = localFont({
-  src: "./fonts/Gilroy-ExtraBold.woff2",
+  src: "./fonts/Gilroy-Extrabold.woff2",
 });
 
 export const gilroyBold = localFont({
