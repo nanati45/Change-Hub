@@ -33,7 +33,7 @@ const HeroSection = () => {
                 className={`${gilroyRegular.className} flex items-center justify-center text-center w-full px-16 text-[16px]`}
               >
                 We are not just consultants. We are architects of
-                transformation. Whether you're scaling your operations,
+                transformation. Whether you&#39;re scaling your operations,
                 integrating new technology, or redefining your business model.
                 we make change work for you.
               </p>
