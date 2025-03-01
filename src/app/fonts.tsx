@@ -1,11 +1,17 @@
 import { Manrope } from "next/font/google";
+import { Baskervville } from "next/font/google";
+
 import localFont from "next/font/local";
 
 export const manrope = Manrope({
   subsets: ["latin"],
-  weight: "400",
+  weight: "600",
 });
 
+export const baskervville = Baskervville({
+  subsets: ["latin"],
+  weight: "400",
+});
 export const clashBold = localFont({
   src: "./fonts/ClashGrotesk-Bold.woff2",
 });
