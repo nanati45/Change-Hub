@@ -1,11 +1,15 @@
 import React from "react";
 
-import { clashBold } from "@/app/fonts";
+import TopNavBar from "@/components/TopNavBar";
+import HeroSection from "./sections/HeroSection";
+import OurServices from "./sections/OurServicesSection";
 const page = () => {
   return (
-    <div className={`${clashBold.className} text-[36px] text-headings`}>
-      {" "}
-      hello
+    <div className="relative w-full ">
+      <div className="absolute top-2 w-full">
+        <TopNavBar />
+      </div>
+      <HeroSection />
     </div>
   );
 };
