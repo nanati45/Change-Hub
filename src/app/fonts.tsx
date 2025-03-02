@@ -16,6 +16,9 @@ export const clashBold = localFont({
   src: "./fonts/ClashGrotesk-Bold.woff2",
 });
 
+export const clashSemibold = localFont({
+  src: "./fonts/ClashGrotesk-Semibold.woff2",
+});
 export const gilroyExtraBold = localFont({
   src: "./fonts/Gilroy-Extrabold.woff2",
 });
