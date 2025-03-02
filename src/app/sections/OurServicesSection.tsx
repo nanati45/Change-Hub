@@ -160,7 +160,7 @@ const OurServices = () => {
         </p>
         <div className=" flex flex-col px-4 items-center justify-center gap-1">
           <p className={`${gilroyBold.className} text-sky-blue text-[16px]`}>
-            Services
+            SERVICES
           </p>
           <p
             className={`${manrope.className} text-primary text-[36px] md:text-[48px] lg:text-[56px] font-normal`}
