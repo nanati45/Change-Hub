@@ -1,16 +1,20 @@
 import React from "react";
 import { clashSemibold, gilroyBold, manrope } from "../fonts";
 import Approach from "@/components/Approach";
+import Image from "next/image";
 
 const OurApproach = () => {
   return (
-    <div className="flex flex-col items-center justify-center">
-      <div className="flex flex-col items-center justify-center">
+    <div className="relative flex flex-col items-center justify-center">
+      <div className=" flex flex-col items-center justify-center">
         <p
           className={` ${clashSemibold.className} text-[56px] md:text-[96px] lg:text-[128px] bg-gradient-to-b from-[#2222221a] to-[#2222220] bg-clip-text text-transparent`}
         >
           Approach
         </p>
+        <div className="max-lg:hidden block absolute inset-y-0 right-0  items-start">
+          <Image src={`/images/dots.svg`} alt="dots" width={150} height={150} />
+        </div>
         <div className=" flex flex-col px-4 items-center justify-center gap-1">
           <p className={`${gilroyBold.className} text-sky-blue text-[16px]`}>
             OUR METHOD
@@ -23,6 +27,14 @@ const OurApproach = () => {
         </div>
       </div>
       <div className="max-w-[1015px] px-4 grid grid-cols-6 grid-rows-6 mt-16 items-stretch gap-4">
+        <div className="max-md:hidden block absolute inset-y-0 left-2 items-center">
+          <Image
+            src={`/images/shadow.svg`}
+            alt="dots"
+            width={70}
+            height={200}
+          />
+        </div>
         <div className="md:col-span-2 col-span-3 md:row-span-3 row-span-2 flex">
           <Approach
             number="01"
