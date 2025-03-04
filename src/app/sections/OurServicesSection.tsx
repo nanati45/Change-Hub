@@ -150,25 +150,44 @@ const OurServices = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-full gap-6">
-      {/* Header */}
-      <div className="flex flex-col items-center justify-center">
+    <div className="relative flex flex-col items-center justify-center w-full gap-6 ">
+      {/* <div className="absolute inset-0 w-full h-full">
+        <Image
+          src="/images/liquid-bg-unscreen.gif"
+          alt="bg"
+          fill
+          unoptimized
+          className="object-cover z-[-2]"
+        />
+
+        <div
+          className="absolute inset-0 z-[-1] pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%)",
+          }}
+        />
+      </div> */}
+
+      <div className="flex flex-col items-center justify-center px-4">
         <p
           className={` ${clashSemibold.className} text-[56px] md:text-[96px] lg:text-[128px] bg-gradient-to-b from-[#2222221a] to-[#2222220] bg-clip-text text-transparent`}
         >
           Our Services
         </p>
         <div className=" flex flex-col px-4 items-center justify-center gap-1">
-          <p className={`${gilroyBold.className} text-sky-blue text-[16px]`}>
+          <p
+            className={`${gilroyBold.className} text-sky-blue text-[12px] max-sm:text-[16px]`}
+          >
             SERVICES
           </p>
           <p
-            className={`${manrope.className} text-primary text-[36px] md:text-[48px] lg:text-[56px] font-normal`}
+            className={`${manrope.className} text-primary text-[32px] md:text-[48px] lg:text-[56px] font-normal`}
           >
             What We Do
           </p>
           <p
-            className={`${gilroyRegular.className} max-w-[585px] text-primary text-[15px] md:text-[16px] lg:text-[18px]  font-normal text-center`}
+            className={`${gilroyRegular.className} max-w-[585px] text-primary text-[14px] md:text-[16px] lg:text-[18px]  font-normal text-center`}
           >
             We offer a comprehensive suite of services designed to address the
             unique challenges of businesses.
@@ -177,7 +196,7 @@ const OurServices = () => {
       </div>
 
       {/* Services Section with Pagination */}
-      <div className="relative flex items-center justify-center w-full max-w-[1005px] px-[32px] mx-4">
+      <div className="relative flex items-center justify-center w-full max-w-[1221px] px-[32px] ">
         {/* Left Arrow - Hidden on First Slide */}
         {currentIndex > 0 && (
           <button
@@ -189,7 +208,7 @@ const OurServices = () => {
         )}
 
         {/* Sliding Services Container */}
-        <div className="overflow-hidden w-full">
+        <div className="overflow-hidden w-full max-w-[1005px]">
           <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -212,7 +231,7 @@ const OurServices = () => {
         {currentIndex < totalServices - 1 && (
           <button
             onClick={goNext}
-            className="absolute right-3  z-10 hidden md:flex items-center justify-center transition"
+            className="absolute right-3 z-10 hidden md:flex items-center justify-center transition"
           >
             <SlideRightIcon />
           </button>

@@ -219,3 +219,26 @@ export const CollaborationIcon = () => (
     />
   </svg>
 );
+
+export const SendIcon = () => (
+  <svg
+    width="19"
+    height="19"
+    viewBox="0 0 19 19"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M7.63227 3.94494L14.0523 7.15494C16.9323 8.59494 16.9323 10.9499 14.0523 12.3899L7.63227 15.5999C3.31227 17.7599 1.54977 15.9899 3.70977 11.6774L4.36227 10.3799C4.52727 10.0499 4.52727 9.50244 4.36227 9.17244L3.70977 7.86744C1.54977 3.55494 3.31977 1.78494 7.63227 3.94494Z"
+      stroke="white"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M4.58002 9.77246H8.63002"
+      stroke="white"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);

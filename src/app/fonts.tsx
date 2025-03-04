@@ -11,6 +11,7 @@ export const manrope = Manrope({
 export const baskervville = Baskervville({
   subsets: ["latin"],
   weight: "400",
+  style: "italic",
 });
 export const clashBold = localFont({
   src: "./fonts/ClashGrotesk-Bold.woff2",

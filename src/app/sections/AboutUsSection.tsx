@@ -4,11 +4,21 @@ import Image from "next/image";
 import { Button } from "@heroui/button";
 import { ArrowIcon } from "@/components/Icons";
 import ValuesAndPrinciples from "@/components/ValuesAndPrinciplesSection";
+import RotatingImages from "@/components/RotatingSpinner";
 
 const AboutUs = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-16 mb-16">
-      <div className="flex flex-col items-center justify-center">
+    <div className="relative flex flex-col items-center justify-center gap-16 my-8">
+      <div className=" flex flex-col items-center justify-center">
+        <div className="block absolute inset-y-0 right-0  items-start">
+          <Image
+            src={`/images/dots.svg`}
+            alt="dots"
+            width={140}
+            height={140}
+            className="max-md:w-[100px] max-md:h-[100px]"
+          />
+        </div>
         <p
           className={` ${clashSemibold.className} text-[56px] md:text-[96px] lg:text-[128px] bg-gradient-to-b from-[#2222221a] to-[#2222220] bg-clip-text text-transparent`}
         >
@@ -25,15 +35,20 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row items-center md:justify-between justify-center gap-24  px-8 max-w-[840px]">
+
+      <div className="block absolute inset-y-0 left-0 top-1/4  items-start">
+        <Image
+          src={`/images/dots.svg`}
+          alt="dots"
+          width={140}
+          height={140}
+          className="max-md:w-[100px] max-md:h-[100px]"
+        />
+      </div>
+
+      <div className=" flex flex-col md:flex-row items-center md:justify-between justify-center gap-24 md:mb-20  px-8 max-w-[840px]">
         <div className="md:w-1/2 w-full flex items-center justify-center">
-          <Image
-            src={"/images/discuss.webp"}
-            alt="discuss"
-            width={400}
-            height={400}
-            className="shrink-0"
-          />
+          <RotatingImages />
         </div>
         <div className="md:w-1/2 w-full flex flex-col  items-center justify-start px-4  gap-8">
           <h1
@@ -60,6 +75,18 @@ const AboutUs = () => {
             </Button>
           </div>
         </div>
+      </div>
+      {/* <div className="block absolute inset-y-0 right-0 bottom-0 rotate-[90deg] items-end">
+        <Image src={`/images/dots.svg`} alt="dots" width={150} height={150} />
+      </div> */}
+      <div className="lg:top-1/2 bottom-0 block absolute inset-y-0 right-0 md:top-1/2 top-full pr-2 ">
+        <Image
+          src={`/images/dots.svg`}
+          alt="dots"
+          width={140}
+          height={140}
+          className="rotate-[90deg] max-md:w-[100px] max-md:h-[100px]"
+        />
       </div>
       <ValuesAndPrinciples />
     </div>
