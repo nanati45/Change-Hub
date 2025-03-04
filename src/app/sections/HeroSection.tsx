@@ -1,4 +1,4 @@
-import { ArrowIcon, HelloIcon } from "@/components/Icons";
+import { ArrowIcon } from "@/components/Icons";
 import { TwistedArrowIcon } from "@/components/Icons";
 import React from "react";
 import { gilroyMedium, gilroyRegular } from "@/app/fonts";

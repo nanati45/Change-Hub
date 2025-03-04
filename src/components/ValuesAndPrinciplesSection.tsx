@@ -1,7 +1,6 @@
 import React from "react";
 import { gilroyBold, gilroyMedium, manrope } from "../app/fonts";
 import { CollaborationIcon, InnovationIcon, IntegrityIcon } from "./Icons";
-import Image from "next/image";
 
 const ValuesAndPrinciples = () => {
   return (

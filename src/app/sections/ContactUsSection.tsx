@@ -19,9 +19,9 @@ const ContactUs = () => {
             />
           </div>
           <p>
-            Let's collaborate to accomplish your business objectives, explore
-            innovative technologies, or bring your predefined requirements to
-            life.
+            Let&#39;s collaborate to accomplish your business objectives,
+            explore innovative technologies, or bring your predefined
+            requirements to life.
           </p>
         </div>
       </div>

@@ -3,7 +3,6 @@ import Services from "@/components/Services";
 import React, { useState } from "react";
 import { clashSemibold, gilroyBold, gilroyRegular, manrope } from "../fonts";
 import { SlideRightIcon, SlideLeftIcon } from "@/components/Icons";
-import Image from "next/image";
 
 const serviceList = [
   {
