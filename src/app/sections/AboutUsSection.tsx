@@ -4,7 +4,6 @@ import Image from "next/image";
 import { Button } from "@heroui/button";
 import { ArrowIcon } from "@/components/Icons";
 import ValuesAndPrinciples from "@/components/ValuesAndPrinciplesSection";
-import RotatingImages from "@/components/RotatingSpinner";
 import RotatingSpinner from "@/components/RotatingSpinner";
 
 const AboutUs = () => {
