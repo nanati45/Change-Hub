@@ -4,12 +4,12 @@ import Image from "next/image";
 
 const RotatingSpinner = () => {
   return (
-    <div className="relative flex items-center justify-center w-[360px] h-[360px]">
+    <div className="relative flex items-center justify-center w-[360px] h-[360px] sm:w-[400px] sm:h-[400px]">
       {/* Rotating Outer Dotted Circle */}
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ repeat: Infinity, duration: 50, ease: "linear" }}
-        className="absolute w-[355px] h-[355px] custom-dotted-circle rounded-full "
+        className="absolute w-[340px] h-[340px] sm:w-[365px] sm:h-[365px] custom-dotted-circle rounded-full "
       ></motion.div>
 
       {/* Outer Circle Rotating Images Container */}
@@ -57,7 +57,7 @@ const RotatingSpinner = () => {
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ repeat: Infinity, duration: 50, ease: "linear" }}
-        className="absolute w-[270px] h-[270px] custom-dotted-circle-small rounded-full"
+        className="absolute w-[230px] h-[230px] sm:w-[270px] sm:h-[270px] custom-dotted-circle-small rounded-full"
       ></motion.div>
 
       {/* Inner Rotating Images */}
@@ -76,7 +76,7 @@ const RotatingSpinner = () => {
         </motion.div>
       </motion.div>
 
-      <div className="absolute w-[220px] h-[220px] flex items-center justify-center rounded-full">
+      <div className="absolute w-[170px] h-[170px] flex items-center justify-center rounded-full">
         <Image src="/images/Mask-group.webp" alt="1" width={220} height={220} />
       </div>
     </div>

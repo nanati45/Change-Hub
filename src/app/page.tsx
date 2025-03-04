@@ -7,7 +7,7 @@ import OurApproach from "./sections/OurApproachSection";
 import AboutUs from "./sections/AboutUsSection";
 const page = () => {
   return (
-    <div className="relative w-full ">
+    <div className="relative w-full px-4">
       <div className="absolute top-2 w-full">
         <TopNavBar />
       </div>

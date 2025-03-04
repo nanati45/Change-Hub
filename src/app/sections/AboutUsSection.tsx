@@ -5,6 +5,7 @@ import { Button } from "@heroui/button";
 import { ArrowIcon } from "@/components/Icons";
 import ValuesAndPrinciples from "@/components/ValuesAndPrinciplesSection";
 import RotatingImages from "@/components/RotatingSpinner";
+import RotatingSpinner from "@/components/RotatingSpinner";
 
 const AboutUs = () => {
   return (
@@ -46,9 +47,9 @@ const AboutUs = () => {
         />
       </div>
 
-      <div className=" flex flex-col md:flex-row items-center md:justify-between justify-center gap-24 md:mb-20  px-8 max-w-[840px]">
+      <div className=" flex flex-col md:flex-row items-center md:justify-between justify-center gap-24 md:mb-20  px-8 max-w-[900px]">
         <div className="md:w-1/2 w-full flex items-center justify-center">
-          <RotatingImages />
+          <RotatingSpinner />
         </div>
         <div className="md:w-1/2 w-full flex flex-col  items-center justify-start px-4  gap-8">
           <h1
