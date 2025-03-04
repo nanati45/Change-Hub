@@ -25,6 +25,32 @@
     rgba(255, 255, 255, 0) 0%,
     rgba(255, 255, 255, 0) 100%
   );
+  --color-blurred: blur(63.48090744018555px);
+
+  --color-gray-block: #22222240;
 
   --breakpoint-mid: "744px";
+}
+
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin 3s linear infinite;
+  }
+}
+.custom-dotted-circle {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: #22222240;
+  border-radius: 50%;
+  border-spacing: 10px;
+  background: #f6f6f666;
+}
+
+.custom-dotted-circle-small {
+  border-width: 2px;
+  border-style: dashed;
+  border-color: #22222226;
+  border-radius: 50%;
+  border-spacing: 10px;
+  background: #f6f6f699;
 }

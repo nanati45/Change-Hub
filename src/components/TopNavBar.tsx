@@ -5,7 +5,7 @@ import { ArrowIcon, HamburgerIcon } from "./Icons";
 import { manrope } from "@/app/fonts";
 const TopNavBar = () => {
   return (
-    <div className="w-full z-20 md:py-[20px]  px-6 lg:px-32 flex items-center justify-between border-borders border-[0.3px] rounded-full bg-white m-4 md:border-0 md:bg-transparent ">
+    <div className="w-full z-20 md:py-[20px]  px-6 lg:px-32 flex items-center justify-between border-borders border-[0.3px] rounded-full bg-white  md:border-0 md:bg-transparent ">
       <div className={`${gilroyBold.className} text-[20px] hidden md:block`}>
         Change Hub
       </div>
