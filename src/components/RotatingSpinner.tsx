@@ -76,7 +76,7 @@ const RotatingSpinner = () => {
         </motion.div>
       </motion.div>
 
-      <div className="absolute w-[170px] h-[170px] flex items-center justify-center rounded-full">
+      <div className="absolute w-[170px] h-[170px] sm:w-[220px] sm:h-[220px] flex items-center justify-center rounded-full">
         <Image src="/images/Mask-group.webp" alt="1" width={220} height={220} />
       </div>
     </div>
