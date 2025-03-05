@@ -26,7 +26,7 @@ const ValuesAndPrinciples = () => {
 
   return (
     <motion.div
-      className="flex flex-col items-center justify-center gap-16 py-6 mb-10"
+      className="flex flex-col items-center justify-center gap-16 pb-6 mb-10"
       initial={{ opacity: 0, y: 100 }} // Start from below and invisible
       animate={{ opacity: 1, y: 0 }} // Animate to visible and normal position
       transition={{ duration: 0.8, ease: "easeOut" }} // Smooth animation

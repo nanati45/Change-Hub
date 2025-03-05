@@ -10,7 +10,7 @@ import ValuesAndPrinciples from "@/components/ValuesAndPrinciplesSection";
 
 const AboutUs = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center gap-16 ">
+    <div className="relative flex flex-col items-center justify-center gap-16 md:gap-12">
       {/* About Us Heading Section */}
       <div className="absolute flex justify-end right-0 top-0">
         <Image
