@@ -39,3 +39,7 @@ export const gilroyRegular = localFont({
 export const gilroyThin = localFont({
   src: "./fonts/Gilroy-Thin.woff2",
 });
+
+export const gilroyRegularItalic = localFont({
+  src: "./fonts/Gilroy-RegularItalic.woff2",
+});

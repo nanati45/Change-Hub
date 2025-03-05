@@ -16,7 +16,7 @@ interface ServicesProps {
   subServices: TitleDescription[];
 }
 
-const Services: React.FC<ServicesProps> = ({
+const Service: React.FC<ServicesProps> = ({
   title,
   description,
   details,
@@ -95,4 +95,4 @@ const Services: React.FC<ServicesProps> = ({
   );
 };
 
-export default Services;
+export default Service;

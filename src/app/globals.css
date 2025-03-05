@@ -29,6 +29,11 @@
   --color-gray-text: #8994a3;
   --color-blue-black: #090a0ecc;
   --color-grey: #888888;
+  --color-white-fade: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.07) 0%,
+    rgba(255, 255, 255, 0) 85.74%
+  );
 
   --color-headings: linear-gradient(
     180deg,
@@ -77,4 +82,13 @@
   border-radius: 50%;
   border-spacing: 10px;
   background: #f6f6f699;
+}
+
+.bg-custom-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.0375) 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.0375) 100%
+  );
 }
