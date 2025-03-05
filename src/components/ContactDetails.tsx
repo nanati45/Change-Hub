@@ -20,7 +20,7 @@ const ContactDetails = () => {
         transition={{ duration: 1 }}
       >
         <p
-          className={`${clashSemibold.className} text-[56px] md:text-[112px] lg:text-[175px] w-full text-center bg-gradient-to-b from-[#FFFFFF] to-[#FFFFFF00] bg-clip-text text-transparent`}
+          className={`${clashSemibold.className} opacity-50 text-[56px] md:text-[112px] lg:text-[175px] w-full text-center bg-gradient-to-b from-[#FFFFFF] to-[#FFFFFF00] bg-clip-text text-transparent`}
         >
           Change Hub
         </p>

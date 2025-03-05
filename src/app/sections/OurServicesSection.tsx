@@ -5,6 +5,7 @@ import { clashSemibold, gilroyBold, gilroyRegular, manrope } from "../fonts";
 import { SlideRightIcon, SlideLeftIcon } from "@/components/Icons";
 import { serviceList } from "@/data/constants";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const OurServices = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -29,12 +30,24 @@ const OurServices = () => {
       animate={{ opacity: 1, y: 0 }} // End at normal position with full opacity
       transition={{ duration: 0.6, ease: "easeOut" }} // Animation duration and easing
     >
+      <div className="absolute  top-1/6 opacity-3 mix-blend-exclusion w-full h-full ">
+        <Image
+          src="/images/liquid-bg-unscreen.gif"
+          alt="bg"
+          fill
+          unoptimized
+          className=" object-cover"
+        />
+
+        <div className="absolute top-0 right-0 w-full h-full bg-overlay  " />
+      </div>
       <div className="flex flex-col items-center justify-center px-4">
         <p
           className={` ${clashSemibold.className} text-[56px] md:text-[96px] lg:text-[128px] bg-gradient-to-b from-[#2222221a] to-[#2222220] bg-clip-text text-transparent`}
         >
           Our Services
         </p>
+
         <div className=" flex flex-col px-4 items-center justify-center gap-1">
           <p
             className={`${gilroyBold.className} text-sky-blue text-[12px] max-sm:text-[16px]`}
@@ -116,23 +129,3 @@ const OurServices = () => {
 };
 
 export default OurServices;
-
-{
-  /* <div className="absolute inset-0 w-full h-full">
-  <Image
-    src="/images/liquid-bg-unscreen.gif"
-    alt="bg"
-    fill
-    unoptimized
-    className="object-cover z-[-2]"
-  />
-
-  <div
-    className="absolute inset-0 z-[-1] pointer-events-none"
-    style={{
-      background:
-        "linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%)",
-    }}
-  />
-</div> */
-}
