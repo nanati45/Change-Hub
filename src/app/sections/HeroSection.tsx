@@ -34,7 +34,7 @@ const HeroSection = () => {
             <div className="flex flex-col items-center justify-center text-center max-w-[850px] gap-[18px]">
               {/* Heading Section */}
               <motion.h1
-                initial={{ x: -100, opacity: 0 }}
+                initial={{ x: -600, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className={`${manrope.className} text-[40px] lg:text-[64px] md:text-[58px] font-bold w-full px-2`}
@@ -44,12 +44,12 @@ const HeroSection = () => {
                   className={`${baskervville.className} italic font-normal`}
                 >
                   F
-                  {"uture".split("").map((letter, index) => (
+                  {"uture.".split("").map((letter, index) => (
                     <motion.span
                       key={index}
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      transition={{ duration: 0.3, delay: 1.2 + index * 0.2 }}
+                      transition={{ duration: 0.3, delay: 2.2 + index * 0.2 }}
                     >
                       {letter}
                     </motion.span>
@@ -59,7 +59,7 @@ const HeroSection = () => {
 
               {/* Paragraph Section */}
               <motion.p
-                initial={{ x: 100, opacity: 0 }}
+                initial={{ x: 600, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className={`${gilroyRegular.className} flex items-center justify-center text-center w-full px-16 text-[16px]`}

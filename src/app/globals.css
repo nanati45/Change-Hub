@@ -35,6 +35,13 @@
     rgba(255, 255, 255, 0) 85.74%
   );
 
+  --color-white-dim: linear-gradient(
+    93.02deg,
+    #eaeaea 35.9%,
+    #ebebeb 35.9%,
+    #b5b9be 57.14%,
+    #727a84 78.23%
+  );
   --color-headings: linear-gradient(
     180deg,
     rgba(34, 34, 34, 0.1) 0%,
@@ -56,6 +63,14 @@
     #708dff 35.9%,
     #5b76e2 35.9%,
     #396499 57.14%
+  );
+
+  --color-overlay: linear-gradient(
+    0deg,
+    #fff 0%,
+    rgba(255, 255, 255, 0) 9.17%,
+    rgba(255, 255, 255, 0) 91%,
+    #fff 100%
   );
 
   --breakpoint-mid: "744px";

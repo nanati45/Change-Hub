@@ -6,22 +6,16 @@ import ContactDetails from "@/components/ContactDetails";
 const ContactUs = () => {
   return (
     <div className="flex flex-col items-center bg-dark-blue relative  w-full">
-      <div className="absolute inset-0 w-full h-full">
+      <div className="absolute right-0  opacity-3 mix-blend-exclusion w-full h-full ">
         <Image
           src="/images/liquid-bg-unscreen.gif"
           alt="bg"
           fill
           unoptimized
-          className="object-cover z-[-2]"
+          className="object-cover"
         />
 
-        <div
-          className="absolute inset-0 z-[-1] pointer-events-none"
-          style={{
-            background:
-              "linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%)",
-          }}
-        />
+        <div className="absolute top-0 left-0 w-full h-full bg-overlay  " />
       </div>
       <SendEmail />
       <ContactDetails />

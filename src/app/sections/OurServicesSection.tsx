@@ -3,135 +3,9 @@ import Service from "@/components/Service";
 import React, { useState } from "react";
 import { clashSemibold, gilroyBold, gilroyRegular, manrope } from "../fonts";
 import { SlideRightIcon, SlideLeftIcon } from "@/components/Icons";
-
-const serviceList = [
-  {
-    title: "Digital Transformation",
-    description:
-      "Revolutionize your operations with the latest digital tools and strategies.",
-
-    details: {
-      title: "Contact Us",
-      url: "",
-    },
-    imageURL: "/images/ser.webp",
-    subServices: [
-      {
-        title: "Process Automation",
-        description: "Streamline workflows to enhance efficiency.",
-      },
-      {
-        title: "Customer Experience Enhancement",
-        description: "Utilize digital platforms to improve client engagement.",
-      },
-      {
-        title: "Cloud Integration",
-        description:
-          "Leverage cloud technologies for scalability and flexibility.",
-      },
-    ],
-  },
-  {
-    title: "Change Management",
-    description: "Navigate organizational change with confidence.",
-    details: {
-      title: "Contact Us",
-      url: "",
-    },
-    imageURL: "/images/img2.webp",
-    subServices: [
-      {
-        title: "Training & Development",
-        description:
-          "Equip your team with the skills needed for new initiatives.",
-      },
-      {
-        title: "Risk Mitigation",
-        description: "Identify and address potential challenges proactively.",
-      },
-      {
-        title: "Stakeholder Engagement",
-        description: "Ensure all parties are aligned and informed.",
-      },
-    ],
-  },
-
-  {
-    title: "Data Analytics",
-    description: "Transform data into actionable insights.",
-
-    details: {
-      title: "Contact Us",
-      url: "",
-    },
-    imageURL: "/images/img3.webp",
-    subServices: [
-      {
-        title: "Business Intelligence",
-        description: "Make informed decisions with real-time data analysis.",
-      },
-      {
-        title: "Predictive Analytics",
-        description: "Anticipate market trends and customer needs.",
-      },
-      {
-        title: "Data Visualization",
-        description: " Present complex data in an easily digestible format.",
-      },
-    ],
-  },
-  {
-    title: "ERP Solutions",
-    description: "Optimize your resources with tailored ERP systems.",
-    details: {
-      title: "Get ERP Solution",
-      url: "",
-    },
-    imageURL: "/images/img4.webp",
-    subServices: [
-      {
-        title: "System Selection & Implementation",
-        description:
-          "Choose and deploy the right ERP solution for your business.",
-      },
-      {
-        title: "Customization & Integration",
-        description: "Adapt ERP systems to fit your specific processes.",
-      },
-      {
-        title: "Ongoing Support & Maintenance",
-        description:
-          " Ensure your ERP system evolves with your business needs.",
-      },
-    ],
-  },
-  {
-    title: "Technology Consulting",
-    description:
-      "Revolutionize your operations with the latest digital tools and strategies.",
-    details: {
-      title: "Get Free Consultation",
-      url: "",
-    },
-    imageURL: "/images/img55.webp",
-    subServices: [
-      {
-        title: "IT Infrastructure Assessment",
-        description: "Evaluate and enhance your current tech setup.",
-      },
-      {
-        title: "Cybersecurity Strategies",
-        description: "Protect your business from digital threats.",
-      },
-      {
-        title: "Emerging Technology Adoption",
-        description:
-          "Integrate AI, IoT, and other innovations into your operations.",
-      },
-    ],
-  },
-  // Add more services here as needed
-];
+import { serviceList } from "@/data/constants";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const OurServices = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -150,31 +24,30 @@ const OurServices = () => {
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-center w-full gap-6 ">
-      {/* <div className="absolute inset-0 w-full h-full">
+    <motion.div
+      className="relative flex flex-col items-center justify-center w-full gap-6"
+      initial={{ opacity: 0, y: 200 }} // Start from bottom and transparent
+      animate={{ opacity: 1, y: 0 }} // End at normal position with full opacity
+      transition={{ duration: 0.6, ease: "easeOut" }} // Animation duration and easing
+    >
+      <div className="absolute  top-1/6 opacity-3 mix-blend-exclusion w-full h-full ">
         <Image
           src="/images/liquid-bg-unscreen.gif"
           alt="bg"
           fill
           unoptimized
-          className="object-cover z-[-2]"
+          className=" object-cover"
         />
 
-        <div
-          className="absolute inset-0 z-[-1] pointer-events-none"
-          style={{
-            background:
-              "linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%)",
-          }}
-        />
-      </div> */}
-
+        <div className="absolute top-0 right-0 w-full h-full bg-overlay  " />
+      </div>
       <div className="flex flex-col items-center justify-center px-4">
         <p
           className={` ${clashSemibold.className} text-[56px] md:text-[96px] lg:text-[128px] bg-gradient-to-b from-[#2222221a] to-[#2222220] bg-clip-text text-transparent`}
         >
           Our Services
         </p>
+
         <div className=" flex flex-col px-4 items-center justify-center gap-1">
           <p
             className={`${gilroyBold.className} text-sky-blue text-[12px] max-sm:text-[16px]`}
@@ -251,7 +124,7 @@ const OurServices = () => {
           />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
