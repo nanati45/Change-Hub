@@ -68,22 +68,23 @@ const SendEmail = () => {
             <div className="flex flex-col text-[14px] gap-2">
               <input
                 id="location"
+                type="text"
                 placeholder="Location*"
-                className="mt-2 py-3 px-4 rounded-full bg-blue-black w-full focus:outline-none focus:ring-2 focus:ring-sky-blue"
+                className="mt-2 py-3 px-4 rounded-full bg-blue-black w-full "
                 required
               />
 
               <input
                 id="phone"
                 placeholder="Phone number*"
-                className="mt-2 py-3 px-4 rounded-full bg-blue-black w-full focus:outline-none focus:ring-2 focus:ring-sky-blue"
+                className="mt-2 py-3 px-4 rounded-full bg-blue-black w-full "
                 required
               />
 
               <input
                 id="email"
                 placeholder="Email*"
-                className="mt-2 py-3 px-4 rounded-3xl bg-blue-black w-full focus:outline-none focus:ring-2 focus:ring-sky-blue"
+                className="mt-2 py-3 px-4 rounded-3xl bg-blue-black w-full "
                 required
               />
             </div>
@@ -92,7 +93,7 @@ const SendEmail = () => {
           <div className="flex mt-auto items-center justify-center w-full">
             <Button
               endContent={<SendIcon />}
-              className="text-white bg-sky-blue py-[10px] px-[24px] w-3/4 rounded-full flex justify-center"
+              className="text-white bg-sky-blue py-[10px] px-[24px] w-3/4 rounded-full flex justify-center cursor-pointer"
             >
               Submit
             </Button>

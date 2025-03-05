@@ -39,7 +39,7 @@ const Service: React.FC<ServicesProps> = ({
         <div className="hidden lg:flex mt-auto self-start">
           <Button
             endContent={<ArrowIcon />}
-            className="bg-primary text-white py-[10px] px-[24px] rounded-full flex justify-start"
+            className="bg-primary text-white py-[10px] px-[24px] rounded-full flex justify-start cursor-pointer"
           >
             {details.title}
           </Button>
@@ -47,16 +47,24 @@ const Service: React.FC<ServicesProps> = ({
       </div>
       <div className="flex md:flex-row flex-col gap-3 items-center justify-center md:justify-between">
         {/* Image container with full height */}
-        <div className="w-[345px] h-[240px] md:w-[395px] md:h-full flex rounded-full">
+        <div className="hidden md:block w-[395px] h-full rounded-full">
           <Image
             src={imageURL}
+            alt="a woman rating 5 stars on a customer service machine"
+            width={261}
+            height={490}
+            className="rounded-3xl w-full h-full object-cover"
+          />
+        </div>
+        <div className="w-[345px] h-[240px] md:hidden flex rounded-full">
+          <Image
+            src={`/images/discuss2.webp`}
             alt="a woman rating 5 stars on a customer service machine"
             width={395}
             height={240}
             className="rounded-3xl w-full h-full object-cover"
           />
         </div>
-
         {/* Text container, centered and height-restricted */}
         <div className="flex flex-col justify-center px-[32px] md:h-full">
           <div className="flex flex-col items-center md:items-start justify-center w-full md:max-h-full">
@@ -86,7 +94,7 @@ const Service: React.FC<ServicesProps> = ({
       <div className="lg:hidden mt-4">
         <Button
           endContent={<ArrowIcon />}
-          className="bg-primary text-white py-[10px] px-[24px] rounded-full flex"
+          className="bg-primary text-white py-[10px] px-[24px] rounded-full flex cursor-pointer"
         >
           Contact Us
         </Button>

@@ -44,14 +44,15 @@ const Approach: FC<ApproachProps> = ({
 
       {/* Right Image (if exists) */}
       {imageURL && (
-        <div className="flex-1 md:w-8/13 w-full h-auto md:h-full flex justify-center md:justify-end">
+        <div className="flex-1 md:w-8/13 w-full h-auto md:h-full  flex justify-center bg-overlay mix-blend-multiply  md:justify-end">
           <Image
             src={imageURL}
             alt="approach symbol"
             width={500}
             height={300}
-            className="w-full md:h-full max-h-full object-contain rounded-b-[20px] md:rounded-r-[32px] md:rounded-b-none"
+            className="w-full h-full object-contain rounded-b-[20px] md:rounded-r-[42px] md:rounded-b-none"
           />
+          <div className="absolute top-0 right-0 w-full h-full bg-overlay  " />
         </div>
       )}
     </div>

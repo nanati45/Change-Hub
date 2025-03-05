@@ -10,8 +10,8 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <div className="h-full mb-60">
-      <div className="h-screen bg-[url('/images/abstract-bg.svg')] bg-cover bg-transparent bg-start flex flex-col gap-4 w-full pt-42 md:pt-48">
+    <div className="h-full mb-10 sm:mb-22 md:mb-55 lg:mb-60">
+      <div className="h-screen bg-[url('/images/abstract-bg.svg')] bg-cover bg-transparent bg-start flex flex-col gap-4 w-full pt-36 md:pt-42">
         <div className="flex flex-col items-center justify-center gap-[26px]">
           <div className="flex flex-col items-center justify-center gap-[26px] w-[350px] md:w-[760px] lg:[830px]">
             {/* Welcome Section */}
@@ -62,7 +62,7 @@ const HeroSection = () => {
                 initial={{ x: 600, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className={`${gilroyRegular.className} flex items-center justify-center text-center w-full px-16 text-[16px]`}
+                className={`${gilroyRegular.className} flex items-center justify-center text-center w-full px-8 md:px-12 text-[16px]`}
               >
                 We are not just consultants. We are architects of
                 transformation. Whether you&#39;re scaling your operations,
@@ -87,7 +87,7 @@ const HeroSection = () => {
 
               <Button
                 endContent={<ArrowIcon />}
-                className={`${manrope.className} bg-sky-blue rounded-full flex gap-1 items-center justify-center text-white text-[12px] md:text-[14px] py-[10px] md:py-[16px] px-[20px]`}
+                className={`${manrope.className} bg-sky-blue rounded-full flex gap-1 items-center justify-center text-white text-[12px] md:text-[14px] py-[10px] md:py-[16px] px-[20px] cursor-pointer`}
               >
                 Start Your Transformation
               </Button>
