@@ -12,7 +12,7 @@ const TopNavBar = () => {
       initial={{ y: -100 }} // Starts above the viewport
       animate={{ y: 0 }} // Animates to the final position
       transition={{ duration: 0.5, ease: "easeOut" }} // Smooth transition
-      className="w-full z-20 md:py-[20px] px-6 lg:px-32 flex items-center justify-between border-borders border-[0.3px] rounded-full bg-white md:border-0 md:bg-transparent"
+      className="w-full z-20 py-3 md:py-[20px] px-6 lg:px-32 flex items-center justify-between border-borders border-[0.3px] rounded-full bg-white md:border-0 md:bg-transparent"
     >
       <div className={`${gilroyBold.className} text-[20px] hidden md:block`}>
         Change Hub
@@ -34,7 +34,7 @@ const TopNavBar = () => {
       <div className={`${manrope.className} text-[14px] hidden md:block`}>
         <Button
           endContent={<ArrowIcon />}
-          className="bg-primary text-white py-[10px] px-[24px] rounded-full flex"
+          className="bg-primary text-white py-[10px] px-[24px] rounded-full flex cursor-pointer"
         >
           Contact Us
         </Button>

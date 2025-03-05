@@ -10,15 +10,15 @@ import ValuesAndPrinciples from "@/components/ValuesAndPrinciplesSection";
 
 const AboutUs = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center gap-16 my-8">
+    <div className="relative flex flex-col items-center justify-center gap-16 md:gap-12">
       {/* About Us Heading Section */}
-      <div className="block absolute inset-y-0 right-0 items-start">
+      <div className="absolute flex justify-end right-0 top-0">
         <Image
           src={`/images/dots.svg`}
           alt="dots"
           width={140}
           height={140}
-          className="max-md:w-[100px] max-md:h-[100px]"
+          className="w-[100px] h-[140px] md:w-[140px] md:h-[200px] "
         />
       </div>
       <motion.div
@@ -45,13 +45,13 @@ const AboutUs = () => {
       </motion.div>
 
       {/* Dots on Left */}
-      <div className="block absolute inset-y-0 left-0 top-1/4 items-start">
+      <div className="absolute flex left-0 top-1/4 self-start">
         <Image
           src={`/images/dots.svg`}
           alt="dots"
           width={140}
           height={140}
-          className="max-md:w-[100px] max-md:h-[100px]"
+          className="w-[100px] h-[140px] md:w-[140px] md:h-[200px] "
         />
       </div>
 
@@ -91,7 +91,7 @@ const AboutUs = () => {
           <div className="flex mt-auto md:self-start self-center">
             <Button
               endContent={<ArrowIcon />}
-              className="bg-primary text-white py-[10px] px-[24px] rounded-full flex justify-start"
+              className="bg-primary text-white py-[10px] px-[24px] rounded-full flex justify-start cursor-pointer"
             >
               Contact Us
             </Button>
@@ -102,11 +102,11 @@ const AboutUs = () => {
       {/* Dots on Right */}
       <div className="lg:top-1/2 bottom-0 block absolute inset-y-0 right-0 md:top-1/2 top-full  ">
         <Image
-          src={`/images/dots.svg`}
+          src={`/images/dots3.svg`}
           alt="dots"
-          width={140}
-          height={140}
-          className="rotate-[90deg] max-md:w-[100px] max-md:h-[100px]"
+          width={230}
+          height={108}
+          className="w-[100px] h-[140px] md:w-[140px] md:h-[200px]"
         />
       </div>
       <ValuesAndPrinciples />

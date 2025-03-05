@@ -25,7 +25,7 @@ const OurServices = () => {
 
   return (
     <motion.div
-      className="relative flex flex-col items-center justify-center w-full gap-6"
+      className="relative flex flex-col items-center justify-center w-full gap-6 "
       initial={{ opacity: 0, y: 200 }} // Start from bottom and transparent
       animate={{ opacity: 1, y: 0 }} // End at normal position with full opacity
       transition={{ duration: 0.6, ease: "easeOut" }} // Animation duration and easing
@@ -74,7 +74,7 @@ const OurServices = () => {
         {currentIndex > 0 && (
           <button
             onClick={goPrev}
-            className="absolute left-3 z-10  hidden md:flex items-center justify-center transition"
+            className="absolute left-3 z-10  hidden md:flex items-center justify-center transition cursor-pointer"
           >
             <SlideLeftIcon />
           </button>
@@ -104,7 +104,7 @@ const OurServices = () => {
         {currentIndex < totalServices - 1 && (
           <button
             onClick={goNext}
-            className="absolute right-3 z-10 hidden md:flex items-center justify-center transition"
+            className="absolute right-3 z-10 hidden md:flex items-center justify-center transition cursor-pointer"
           >
             <SlideRightIcon />
           </button>

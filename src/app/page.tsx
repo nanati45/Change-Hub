@@ -8,7 +8,7 @@ import AboutUs from "./sections/AboutUsSection";
 import ContactUs from "./sections/ContactUsSection";
 const page = () => {
   return (
-    <div className="relative w-full ">
+    <div className="relative w-full flex flex-col ">
       <div className="absolute top-2 w-full">
         <TopNavBar />
       </div>

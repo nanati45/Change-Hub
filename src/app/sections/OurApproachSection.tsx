@@ -7,7 +7,7 @@ import { motion } from "framer-motion"; // Import motion from framer-motion
 
 const OurApproach = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center">
+    <div className="relative flex flex-col items-center justify-center mb-8">
       {/* Background Blob */}
       <div className="absolute left-0 top-3/4 -translate-y-1/2 max-md:hidden pointer-events-none">
         <Image
@@ -79,7 +79,7 @@ const OurApproach = () => {
             number="02"
             title="Strategy"
             description="Crafting tailored solutions that align with your business goals."
-            imageURL="/images/business1.webp"
+            imageURL="/images/business-plan.svg"
           />
         </motion.div>
 
