@@ -7,6 +7,15 @@
   --color-charcoal: #363d48;
   --color-charcoal-bg: #363d48;
   --color-sky-blue: #5b76e2;
+
+  --color-light-blue: #708dff;
+  --color-white-text: linear-gradient(
+    93.02deg,
+    #eaeaea 35.9%,
+    #ebebeb 35.9%,
+    #b5b9be 57.14%,
+    #727a84 78.23%
+  );
   --color-borders: #cecece;
   --color-line: #d6d6d6;
   --color-dots: #d4d4d7;
@@ -15,6 +24,17 @@
 
   --color-border2: #c5c5c540;
   --shadow-custom: "0px 0px 4px 0px rgba(0, 0, 0, 0.05)";
+  --color-dark-blue: #14132d;
+  --color-gray-block: #22222240;
+  --color-gray-text: #8994a3;
+  --color-blue-black: #090a0ecc;
+  --color-grey: #888888;
+  --color-white-fade: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.07) 0%,
+    rgba(255, 255, 255, 0) 85.74%
+  );
+
   --color-headings: linear-gradient(
     180deg,
     rgba(34, 34, 34, 0.1) 0%,
@@ -26,8 +46,17 @@
     rgba(255, 255, 255, 0) 100%
   );
   --color-blurred: blur(63.48090744018555px);
-
-  --color-gray-block: #22222240;
+  --color-contact-bg: linear-gradient(
+    89.86deg,
+    #1b2431 2.23%,
+    rgba(27, 36, 49, 0) 13.36%
+  );
+  --color-mixed-blue: linear-gradient(
+    93.02deg,
+    #708dff 35.9%,
+    #5b76e2 35.9%,
+    #396499 57.14%
+  );
 
   --breakpoint-mid: "744px";
 }
@@ -53,4 +82,13 @@
   border-radius: 50%;
   border-spacing: 10px;
   background: #f6f6f699;
+}
+
+.bg-custom-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.0375) 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.0375) 100%
+  );
 }

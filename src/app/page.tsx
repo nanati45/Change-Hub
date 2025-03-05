@@ -5,9 +5,10 @@ import HeroSection from "./sections/HeroSection";
 import OurServices from "./sections/OurServicesSection";
 import OurApproach from "./sections/OurApproachSection";
 import AboutUs from "./sections/AboutUsSection";
+import ContactUs from "./sections/ContactUsSection";
 const page = () => {
   return (
-    <div className="relative w-full px-4">
+    <div className="relative w-full ">
       <div className="absolute top-2 w-full">
         <TopNavBar />
       </div>
@@ -16,6 +17,7 @@ const page = () => {
       <OurServices />
       <OurApproach />
       <AboutUs />
+      <ContactUs />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 "use client";
-import Services from "@/components/Services";
+import Service from "@/components/Service";
 import React, { useState } from "react";
 import { clashSemibold, gilroyBold, gilroyRegular, manrope } from "../fonts";
 import { SlideRightIcon, SlideLeftIcon } from "@/components/Icons";
@@ -215,7 +215,7 @@ const OurServices = () => {
           >
             {serviceList.map((service, index) => (
               <div key={index} className="w-full flex-shrink-0">
-                <Services
+                <Service
                   title={service.title}
                   description={service.description}
                   details={service.details}
