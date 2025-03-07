@@ -56,7 +56,7 @@ export default function ContactForm() {
 
       setResponseMessage("Form submitted successfully!");
       setFormData({ name: "", phone: "", email: "", message: "" }); // Clear form
-    } catch (error) {
+    } catch (_error) {
       setResponseMessage("Please try again later.");
     } finally {
       setLoading(false);

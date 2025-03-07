@@ -47,8 +47,6 @@ const OurServices = () => {
     <motion.div
       id="services"
       className="relative flex flex-col items-center justify-center w-full gap-6 pt-8"
-      id="services"
-      className="relative flex flex-col items-center justify-center w-full gap-6 pt-8"
       initial={{ opacity: 0, y: 200 }} // Start from bottom and transparent
       animate={{ opacity: 1, y: 0 }} // End at normal position with full opacity
       transition={{ duration: 0.6, ease: "easeOut" }} // Animation duration and easing
