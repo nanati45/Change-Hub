@@ -94,7 +94,7 @@ export default function ContactForm() {
               placeholder="Phone number*"
               value={formData.phone}
               onChange={handleChange}
-              className="border-[1px] border-[#FFFFFF40] py-4 px-5 rounded-full placeholder:text-[#B7BEC7] bg-light-blue-black w-full focus:outline-none focus:ring-2 focus:ring-sky-blue cursor-text relative"
+              className="border-[1px] border-[#FFFFFF40] py-4 px-5 rounded-2xl placeholder:text-[#B7BEC7] bg-light-blue-black w-full focus:outline-none focus:ring-2 focus:ring-sky-blue cursor-text relative"
               required
             />
 
