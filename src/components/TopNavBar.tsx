@@ -6,6 +6,7 @@ import { ArrowIcon, HamburgerIcon } from "./Icons";
 import { manrope } from "@/app/fonts";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 const TopNavBar = () => {
   const navMenu = [
@@ -45,12 +46,19 @@ const TopNavBar = () => {
       transition={{ duration: 0.5, ease: "easeOut" }} // Smooth transition
       className="w-full z-20 py-3 md:py-[20px] px-6 lg:px-32 flex items-center justify-between border-borders border-[0.3px] rounded-full bg-white md:border-0 md:bg-transparent"
     >
-      <div className={`${gilroyBold.className} text-[20px] hidden md:block`}>
-        Change Hub
+      <div className={`${gilroyBold.className} max-md:scale-70 scale-90`}>
+        <div>
+          <Image
+            src={`/images/logo.svg`}
+            alt="change hub logo"
+            width={40}
+            height={50}
+          />
+        </div>
       </div>
-      <div className={`${gilroyBold.className} text-[20px] block md:hidden`}>
+      {/* <div className={`${gilroyBold.className} text-[20px] block md:hidden`}>
         C-H
-      </div>
+      </div> */}
 
       {/* Desktop Navigation */}
       <div className={`${gilroyMedium.className} text-[16px] hidden md:block`}>

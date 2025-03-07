@@ -1,21 +1,19 @@
 "use client";
 import Service from "@/components/Service";
 import React, { useState } from "react";
-import {
-  clashMedium,
-  clashSemibold,
-  gilroyBold,
-  gilroyRegular,
-  manrope,
-} from "../fonts";
+import { clashMedium, gilroyBold, gilroyRegular, manrope } from "../fonts";
 import { SlideRightIcon, SlideLeftIcon } from "@/components/Icons";
 import { serviceList } from "@/data/constants";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import { motion, useMotionValue } from "framer-motion";
+
+const DRAG_BUFFER = 50;
 
 const OurServices = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [dragging, setDraggging] = useState(false);
   const totalServices = serviceList.length;
+
+  const dragX = useMotionValue(0);
 
   const goNext = () => {
     if (currentIndex < totalServices - 1) {
@@ -29,6 +27,22 @@ const OurServices = () => {
     }
   };
 
+  const onDragStart = () => {
+    setDraggging(!dragging);
+  };
+
+  const onDragEnd = () => {
+    setDraggging(!dragging);
+    const x = dragX.get();
+    console.log(x);
+
+    if (x <= -DRAG_BUFFER && currentIndex < totalServices - 1) {
+      setCurrentIndex((prev) => prev + 1);
+    } else if (x >= -DRAG_BUFFER && currentIndex > 0) {
+      setCurrentIndex((prev) => prev - 1);
+    }
+  };
+
   return (
     <motion.div
       id="services"
@@ -37,17 +51,6 @@ const OurServices = () => {
       animate={{ opacity: 1, y: 0 }} // End at normal position with full opacity
       transition={{ duration: 0.6, ease: "easeOut" }} // Animation duration and easing
     >
-      <div className="absolute flex items-center justify-center  top-1/6 opacity-3 mix-blend-exclusion  w-full h-full ">
-        <Image
-          src="/images/liquid-bg-unscreen.gif"
-          alt="bg"
-          fill
-          unoptimized
-          className=" object-contain w-full scale-y-[-1]"
-        />
-
-        <div className="absolute top-0 right-0 w-full h-full bg-overlay" />
-      </div>
       <div className="flex flex-col items-center justify-center px-4">
         <p
           className={` ${clashMedium.className} font-medium text-[52px] md:text-[96px] lg:text-[138px] bg-gradient-to-b from-[#2222221a] to-[#2222220] bg-clip-text text-transparent`}
@@ -55,9 +58,9 @@ const OurServices = () => {
           Our Services
         </p>
 
-        <div className=" flex flex-col px-4 items-center justify-center  ">
+        <div className=" flex flex-col md:-mt-8 sm:-mt-4 -mt-2 gap-3 px-4 items-center justify-center  ">
           <p
-            className={`${gilroyBold.className} font-normal text-sky-blue text-[12px] max-sm:text-[16px]`}
+            className={`${gilroyBold.className}  font-normal text-sky-blue text-[12px] sm:text-[14px] md:text-[16px]`}
           >
             SERVICES
           </p>
@@ -89,22 +92,46 @@ const OurServices = () => {
 
         {/* Sliding Services Container */}
         <div className="overflow-hidden min-w-[350px] w-full max-w-[1005px]">
-          <div
-            className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          <motion.div
+            className="flex transition-transform duration-100 ease-in-out"
+            drag="x"
+            dragConstraints={{
+              left: 0,
+              right: 0,
+            }}
+            style={{
+              x: dragX,
+            }}
+            transition={{
+              type: "spring",
+              mass: 3,
+              stiffness: 600,
+              damping: 50,
+            }}
+            onDragStart={onDragStart}
+            onDragEnd={onDragEnd}
+            animate={{
+              translateX: `-${currentIndex * 100}%`,
+            }}
           >
             {serviceList.map((service, index) => (
-              <div key={index} className="w-full flex-shrink-0">
-                <Service
-                  title={service.title}
-                  description={service.description}
-                  details={service.details}
-                  imageURL={service.imageURL}
-                  subServices={service.subServices}
-                />
-              </div>
+              <motion.div
+                key={index}
+                className="w-full flex-shrink-0 cursor-grab "
+                animate={{
+                  scale: currentIndex === index ? 0.95 : 0.85,
+                }}
+                transition={{
+                  type: "spring",
+                  mass: 3,
+                  stiffness: 200,
+                  damping: 50,
+                }}
+              >
+                <Service {...service} />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         {/* Right Arrow - Hidden on Last Slide */}
@@ -123,6 +150,7 @@ const OurServices = () => {
         {serviceList.map((_, index) => (
           <span
             key={index}
+            onClick={() => setCurrentIndex(index)}
             className={`w-[7px] h-[7px] rounded-full ${
               index === currentIndex
                 ? "bg-sky-blue w-[21px] h-[7px]"

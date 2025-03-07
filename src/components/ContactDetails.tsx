@@ -9,6 +9,7 @@ import {
 } from "@/app/fonts";
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
 const ContactDetails = () => {
   return (
@@ -32,7 +33,30 @@ const ContactDetails = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
       >
+        <motion.div
+          className=" flex md:hidden flex-col items-center justify-start gap-8 w-full col-span-8 px-6 py-4"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <div>
+            <Image
+              src={`/images/logo.svg`}
+              alt="change hub logo"
+              width={40}
+              height={50}
+            />
+          </div>
+          <p className="text-center">
+            <span className="text-sky-blue">Change-hub</span> is a company based
+            in <span className="text-sky-blue">Addis Ababa</span>, Ethiopia.
+            That offers various services such as Change Management, Data
+            Analytics, Data Analytics, ERP Solutions, and much more.
+          </p>
+        </motion.div>
+
         {/* Left Section */}
+
         <motion.div
           className="flex col-span-8 sm:col-span-4 md:col-span-2 flex-col items-center sm:items-start justify-start gap-8 p-4"
           initial={{ opacity: 0, x: -200 }}
@@ -45,12 +69,20 @@ const ContactDetails = () => {
             Change Hub
           </p>
           <ul
-            className={`${gilroyMedium.className} flex flex-col gap-[10px] justify-start font-normal text-[16px] sm:text-left text-center`}
+            className={`${gilroyMedium.className} flex flex-col  gap-[10px] justify-start font-normal text-[16px] sm:text-left text-center`}
           >
-            <li>Services</li>
-            <li>Our Approach</li>
-            <li>About Us</li>
-            <li>Contact Us</li>
+            <li className="cursor-pointer">
+              <Link href="#services">Services</Link>
+            </li>
+            <li className="cursor-pointer">
+              <Link href="#our-approach">Our Approach</Link>
+            </li>
+            <li className="cursor-pointer">
+              <Link href="#about-us">About Us</Link>
+            </li>
+            <li className="cursor-pointer">
+              <Link href="#contact-us">Contact Us</Link>
+            </li>
           </ul>
         </motion.div>
 
@@ -69,10 +101,11 @@ const ContactDetails = () => {
               height={50}
             />
           </div>
-          <p className="text-center">
-            Change-hub is a company based in Addis Ababa, Ethiopia. That offers
-            various services such as Change Management, Data Analytics, Data
-            Analytics, ERP Solutions, and much more.
+          <p className=" text-center">
+            <span className="text-sky-blue">Change-hub</span> is a company based
+            in <span className="text-sky-blue">Addis Ababa</span>, Ethiopia.
+            That offers various services such as Change Management, Data
+            Analytics, Data Analytics, ERP Solutions, and much more.
           </p>
         </motion.div>
 

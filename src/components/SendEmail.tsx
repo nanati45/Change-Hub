@@ -1,7 +1,5 @@
 "use client";
-import { Button } from "@heroui/button";
 import React from "react";
-import { SendIcon } from "./Icons";
 import Image from "next/image";
 import { gilroyBold, gilroyRegular } from "@/app/fonts";
 import { motion } from "framer-motion";

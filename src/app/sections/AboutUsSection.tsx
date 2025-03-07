@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { clashSemibold, gilroyBold, gilroyMedium, manrope } from "../fonts";
+import { clashMedium, gilroyBold, gilroyMedium, manrope } from "../fonts";
 import Image from "next/image";
 import { Button } from "@heroui/button";
 import { ArrowIcon } from "@/components/Icons";
@@ -31,13 +31,13 @@ const AboutUs = () => {
           />
         </div>
         <p
-          className={` ${clashSemibold.className} z-40 text-[56px] md:text-[96px] lg:text-[128px] bg-gradient-to-b from-[#2222221a] to-[#2222220] bg-clip-text text-transparent`}
+          className={` ${clashMedium.className} font-medium z-40 text-[52px] md:text-[96px] lg:text-[138px] bg-gradient-to-b from-[#2222221a] to-[#2222220] bg-clip-text text-transparent`}
         >
           About Us
         </p>
-        <div className="flex flex-col px-4 items-center justify-center gap-1">
+        <div className=" flex flex-col px-5 gap-3 md:-mt-8 sm:-mt-5 -mt-2 items-center justify-center  ">
           <p
-            className={`${gilroyBold.className} font-normal text-sky-blue text-[16px]`}
+            className={`${gilroyBold.className} font-normal text-sky-blue text-[12px] sm:text-[14px] md:text-[16px]`}
           >
             WHO WE ARE
           </p>
@@ -64,7 +64,7 @@ const AboutUs = () => {
       <div className="flex flex-col md:flex-row items-center md:justify-between justify-center gap-8 md:mb-8 px-4 max-w-[1000px]">
         {/* Rotating Spinner from Left */}
         <motion.div
-          className="md:w-1/2 w-full flex items-center  justify-center"
+          className="md:w-1/2 w-full flex items-center shrink  justify-center"
           initial={{ opacity: 0, x: -600 }} // Start from left with opacity 0
           animate={{ opacity: 1, x: 0 }} // Animate to normal position
           transition={{ duration: 0.6, ease: "easeOut" }}
