@@ -39,8 +39,6 @@ const TopNavBar = () => {
     return () => document.removeEventListener("click", handleClickOutside);
   }, [isMenuOpen]);
 
- 
-
   // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: any) => {
@@ -100,24 +98,8 @@ const TopNavBar = () => {
               <Link href={menu.sectionId}>{menu.label}</Link>
             </li>
           ))}
-          {navMenu.slice(0, 3).map((menu, index) => (
-            <li
-              key={index}
-              onClick={() => setActiveIndex(index)}
-              className={`${
-                gilroySemiBold.className
-              } text-[16px] cursor-pointer transition-all ${
-                activeIndex === index
-                  ? ` text-primary font-semibold ${gilroyBold.className}`
-                  : `text-grey font-normal ${gilroyMedium.className}`
-              }`}
-            >
-              <Link href={menu.sectionId}>{menu.label}</Link>
-            </li>
-          ))}
         </ul>
       </div>
-
 
       <div className={`${manrope.className} text-[14px] hidden md:block`}>
         <Button
@@ -125,40 +107,9 @@ const TopNavBar = () => {
           className="bg-primary font-semibold text-white py-[10px] px-6 rounded-full flex cursor-pointer"
         >
           <Link href="#contact-us">Contact Us</Link>
-          <Link href="#contact-us">Contact Us</Link>
         </Button>
       </div>
 
-      {/* Mobile Menu Toggle */}
-      <div className="block md:hidden relative">
-        <div
-          className="hamburger-icon cursor-pointer"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <HamburgerIcon />
-        </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="mobile-menu absolute right-0 top-full mt-2 w-48 bg-white shadow-lg rounded-lg p-4 flex flex-col items-start"
-          >
-            {navMenu.map((menu, index) => (
-              <Link
-                key={index}
-                href={menu.sectionId}
-                onClick={() => setIsMenuOpen(false)}
-                className="block text-[16px] text-primary py-2 w-full"
-              >
-                {menu.label}
-              </Link>
-            ))}
-          </motion.div>
-        )}
-</div>
       {/* Mobile Menu Toggle */}
       <div className="block md:hidden relative">
         <div

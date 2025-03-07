@@ -71,9 +71,6 @@ const OurApproach = () => {
             number={approachSteps[0].number}
             title={approachSteps[0].title}
             description={approachSteps[0].description()}
-            number={approachSteps[0].number}
-            title={approachSteps[0].title}
-            description={approachSteps[0].description()}
           />
         </motion.div>
 
@@ -85,11 +82,6 @@ const OurApproach = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <Approach
-            number={approachSteps[1].number}
-            title={approachSteps[1].title}
-            description={approachSteps[1].description()}
-            imageURL1={approachSteps[1].imageURL1}
-            imageURL2={approachSteps[1].imageURL2}
             number={approachSteps[1].number}
             title={approachSteps[1].title}
             description={approachSteps[1].description()}
@@ -111,11 +103,6 @@ const OurApproach = () => {
             description={approachSteps[2].description()}
             imageURL1={approachSteps[2].imageURL1}
             imageURL2={approachSteps[2].imageURL2}
-            number={approachSteps[2].number}
-            title={approachSteps[2].title}
-            description={approachSteps[2].description()}
-            imageURL1={approachSteps[2].imageURL1}
-            imageURL2={approachSteps[2].imageURL2}
           />
         </motion.div>
 
@@ -130,9 +117,6 @@ const OurApproach = () => {
             number={approachSteps[3].number}
             title={approachSteps[3].title}
             description={approachSteps[3].description()}
-            number={approachSteps[3].number}
-            title={approachSteps[3].title}
-            description={approachSteps[3].description()}
           />
         </motion.div>
       </div>
@@ -141,133 +125,3 @@ const OurApproach = () => {
 };
 
 export default OurApproach;
-// <div className="max-w-[1015px] px-4 grid grid-cols-12 grid-rows-12 mt-16 items-stretch gap-4">
-//   {/* First Approach Step */}
-//   <motion.div
-//     className="md:col-span-5 col-span-12 sm:col-span-6 md:row-span-6 row-span-2 flex"
-//     initial={{ opacity: 0, x: -100 }} // Start from left with opacity 0
-//     animate={{ opacity: 1, x: 0 }} // Animate to normal position
-//     transition={{ duration: 0.8, ease: "easeOut" }}
-//   >
-//     <Approach
-//       number="01"
-//       title="Consultation"
-//       description="We begin by understanding your unique challenges and objectives."
-//     />
-//   </motion.div>
-
-//   {/* Second Approach Step */}
-//   <motion.div
-//     className="md:col-span-7 col-span-12 sm:col-span-6 md:row-span-6 row-span-4 flex"
-//     initial={{ opacity: 0, x: 100 }} // Start from right with opacity 0
-//     animate={{ opacity: 1, x: 0 }} // Animate to normal position
-//     transition={{ duration: 0.8, ease: "easeOut" }}
-//   >
-//     <Approach
-//       number="02"
-//       title="Strategy"
-//       description="Crafting tailored solutions that align with your business goals."
-//       imageURL="/images/business-plan.svg"
-//     />
-//   </motion.div>
-
-//   {/* Third Approach Step */}
-//   <motion.div
-//     className="md:col-span-7 col-span-12 sm:col-span-6 md:row-span-6 row-span-4 flex"
-//     initial={{ opacity: 0, x: -100 }} // Start from left with opacity 0
-//     animate={{ opacity: 1, x: 0 }} // Animate to normal position
-//     transition={{ duration: 0.8, ease: "easeOut" }}
-//   >
-//     <Approach
-//       number="03"
-//       title="Implementation"
-//       description="Deploying strategies with precision and agility."
-//       imageURL="/images/tar22.webp"
-//     />
-//   </motion.div>
-
-//   {/* Fourth Approach Step */}
-//   <motion.div
-//     className="md:col-span-5 col-span-12 sm:col-span-6 md:row-span-6 row-span-2 flex"
-//     initial={{ opacity: 0, x: 100 }} // Start from right with opacity 0
-//     animate={{ opacity: 1, x: 0 }} // Animate to normal position
-//     transition={{ duration: 0.8, ease: "easeOut" }}
-//   >
-//     <Approach
-//       number="04"
-//       title="Continuous Support"
-//       description="Providing ongoing assistance to ensure sustained success."
-//     />
-//   </motion.div>
-// </div>
-
-/* <div className="max-lg:hidden block absolute inset-y-0 left-0 items-start">
-// <div className="max-w-[1015px] px-4 grid grid-cols-12 grid-rows-12 mt-16 items-stretch gap-4">
-//   {/* First Approach Step */}
-//   <motion.div
-//     className="md:col-span-5 col-span-12 sm:col-span-6 md:row-span-6 row-span-2 flex"
-//     initial={{ opacity: 0, x: -100 }} // Start from left with opacity 0
-//     animate={{ opacity: 1, x: 0 }} // Animate to normal position
-//     transition={{ duration: 0.8, ease: "easeOut" }}
-//   >
-//     <Approach
-//       number="01"
-//       title="Consultation"
-//       description="We begin by understanding your unique challenges and objectives."
-//     />
-//   </motion.div>
-
-//   {/* Second Approach Step */}
-//   <motion.div
-//     className="md:col-span-7 col-span-12 sm:col-span-6 md:row-span-6 row-span-4 flex"
-//     initial={{ opacity: 0, x: 100 }} // Start from right with opacity 0
-//     animate={{ opacity: 1, x: 0 }} // Animate to normal position
-//     transition={{ duration: 0.8, ease: "easeOut" }}
-//   >
-//     <Approach
-//       number="02"
-//       title="Strategy"
-//       description="Crafting tailored solutions that align with your business goals."
-//       imageURL="/images/business-plan.svg"
-//     />
-//   </motion.div>
-
-//   {/* Third Approach Step */}
-//   <motion.div
-//     className="md:col-span-7 col-span-12 sm:col-span-6 md:row-span-6 row-span-4 flex"
-//     initial={{ opacity: 0, x: -100 }} // Start from left with opacity 0
-//     animate={{ opacity: 1, x: 0 }} // Animate to normal position
-//     transition={{ duration: 0.8, ease: "easeOut" }}
-//   >
-//     <Approach
-//       number="03"
-//       title="Implementation"
-//       description="Deploying strategies with precision and agility."
-//       imageURL="/images/tar22.webp"
-//     />
-//   </motion.div>
-
-//   {/* Fourth Approach Step */}
-//   <motion.div
-//     className="md:col-span-5 col-span-12 sm:col-span-6 md:row-span-6 row-span-2 flex"
-//     initial={{ opacity: 0, x: 100 }} // Start from right with opacity 0
-//     animate={{ opacity: 1, x: 0 }} // Animate to normal position
-//     transition={{ duration: 0.8, ease: "easeOut" }}
-//   >
-//     <Approach
-//       number="04"
-//       title="Continuous Support"
-//       description="Providing ongoing assistance to ensure sustained success."
-//     />
-//   </motion.div>
-// </div>
-
-/* <div className="max-lg:hidden block absolute inset-y-0 left-0 items-start">
-  <Image
-    src={`/images/pink.svg`}
-    alt="dots"
-    width={150}
-    height={150}
-    className="opacity-50 bg-blurred"
-  />
-</div> */
