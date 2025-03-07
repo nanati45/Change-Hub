@@ -52,14 +52,13 @@ export const HamburgerIcon = () => (
 
 export const HelloIcon = () => (
   <svg
-    width="33"
-    height="32"
-    viewBox="0 0 33 32"
+    width="15"
+    height="15"
+    viewBox="0 0 15 15"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect x="0.568848" width="32" height="32" rx="16" fill="white" />
-    <path d="M9.56885 22.98H23.5688V8.98H9.56885V22.98Z" fill="#797C86" />
+    <path d="M0.568848 14.98H14.5688V0.98H0.568848V14.98Z" fill="#797C86" />
   </svg>
 );
 

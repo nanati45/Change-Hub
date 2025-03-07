@@ -1,41 +1,46 @@
 import { clashSemibold, gilroyBold, gilroyMedium } from "@/app/fonts";
-import Image from "next/image";
 import React, { FC } from "react";
-
-interface ApproachProps {
-  number: string;
-  title: string;
-  description: string;
-  imageURL?: string; // Optional prop
-}
+import { ApproachProps } from "./type";
+import Image from "next/image";
 
 const Approach: FC<ApproachProps> = ({
   number,
-  title,
   description,
-  imageURL,
+  title,
+  imageURL1,
+  imageURL2,
 }) => {
   return (
-    <div className="relative rounded-[20px] md:rounded-[32px] flex bg-gray-box w-full h-full flex-col md:flex-row justify-between ">
+    <div
+      className={`relative rounded-[20px] w-full max-h-[500px] md:max-h-[320px] gap-2  md:rounded-[32px] flex bg-gray-box  flex-col md:flex-row  
+       `}
+      // style={
+      //   imageURL
+      //     ? {
+      //         backgroundImage: `url('/images/target2.svg')`,
+      //         backgroundSize: "cover",
+      //         backgroundPosition: "center",
+      //       }
+      //     : {}
+      // }
+    >
       {/* Left Text Content */}
       <div
-        className={`flex flex-col items-start gap-6 p-4 md:p-6 ${
-          imageURL ? "md:w-5/13" : "w-full"
-        }`}
+        className={`flex flex-col w-full object-contain items-start p-4 md:p-6 `}
       >
         <p
           className={`${clashSemibold.className} text-[36px] md:text-[54px] lg:text-[72px] bg-gradient-to-b from-[#2222221a] to-[#2222220] bg-clip-text text-transparent`}
         >
           {number}
         </p>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col w-full gap-2">
           <h1
             className={`${gilroyBold.className} text-[20px] md:text-[24px] font-normal`}
           >
             {title}
           </h1>
           <h2
-            className={`${gilroyMedium.className} max-w-[245px] text-[16px] md:text-[18px] font-normal`}
+            className={`${gilroyMedium.className} flex text-left w-full text-[16px] md:text-[18px] font-normal`}
           >
             {description}
           </h2>
@@ -43,16 +48,26 @@ const Approach: FC<ApproachProps> = ({
       </div>
 
       {/* Right Image (if exists) */}
-      {imageURL && (
-        <div className="flex-1 md:w-8/13 w-full h-auto md:h-full  flex justify-center bg-overlay mix-blend-multiply  md:justify-end">
+      {imageURL1 && (
+        <div className="hidden lg:block shrink absolute bottom-0 right-0 left-0 md:top-0 w-full h-full   bg-overlay mix-blend-multiply  justify-end">
           <Image
-            src={imageURL}
+            src={imageURL1}
+            alt="approach symbol"
+            width={500}
+            height={400}
+            className="w-full h-full object-contain object-right rounded-b-[20px] md:rounded-r-[42px] md:rounded-b-none "
+          />
+        </div>
+      )}
+      {imageURL2 && (
+        <div className="hidden lg:block absolute bottom-0 right-0 left-0 md:top-0 w-full h-full   bg-overlay mix-blend-multiply  justify-baseline">
+          <Image
+            src={imageURL2}
             alt="approach symbol"
             width={500}
             height={300}
-            className="w-full h-full object-contain rounded-b-[20px] md:rounded-r-[42px] md:rounded-b-none"
+            className="block md:hidden w-full h-full object-contain object-bottom rounded-b-[20px] md:rounded-r-[42px] md:rounded-b-none "
           />
-          <div className="absolute top-0 right-0 w-full h-full bg-overlay  " />
         </div>
       )}
     </div>

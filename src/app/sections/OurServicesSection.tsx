@@ -1,7 +1,13 @@
 "use client";
 import Service from "@/components/Service";
 import React, { useState } from "react";
-import { clashSemibold, gilroyBold, gilroyRegular, manrope } from "../fonts";
+import {
+  clashMedium,
+  clashSemibold,
+  gilroyBold,
+  gilroyRegular,
+  manrope,
+} from "../fonts";
 import { SlideRightIcon, SlideLeftIcon } from "@/components/Icons";
 import { serviceList } from "@/data/constants";
 import { motion } from "framer-motion";
@@ -25,37 +31,38 @@ const OurServices = () => {
 
   return (
     <motion.div
-      className="relative flex flex-col items-center justify-center w-full gap-6 "
+      id="services"
+      className="relative flex flex-col items-center justify-center w-full gap-6 pt-8"
       initial={{ opacity: 0, y: 200 }} // Start from bottom and transparent
       animate={{ opacity: 1, y: 0 }} // End at normal position with full opacity
       transition={{ duration: 0.6, ease: "easeOut" }} // Animation duration and easing
     >
-      <div className="absolute  top-1/6 opacity-3 mix-blend-exclusion w-full h-full ">
+      <div className="absolute flex items-center justify-center  top-1/6 opacity-3 mix-blend-exclusion  w-full h-full ">
         <Image
           src="/images/liquid-bg-unscreen.gif"
           alt="bg"
           fill
           unoptimized
-          className=" object-cover"
+          className=" object-contain w-full scale-y-[-1]"
         />
 
-        <div className="absolute top-0 right-0 w-full h-full bg-overlay  " />
+        <div className="absolute top-0 right-0 w-full h-full bg-overlay" />
       </div>
       <div className="flex flex-col items-center justify-center px-4">
         <p
-          className={` ${clashSemibold.className} text-[56px] md:text-[96px] lg:text-[128px] bg-gradient-to-b from-[#2222221a] to-[#2222220] bg-clip-text text-transparent`}
+          className={` ${clashMedium.className} font-medium text-[52px] md:text-[96px] lg:text-[138px] bg-gradient-to-b from-[#2222221a] to-[#2222220] bg-clip-text text-transparent`}
         >
           Our Services
         </p>
 
-        <div className=" flex flex-col px-4 items-center justify-center gap-1">
+        <div className=" flex flex-col px-4 items-center justify-center  ">
           <p
-            className={`${gilroyBold.className} text-sky-blue text-[12px] max-sm:text-[16px]`}
+            className={`${gilroyBold.className} font-normal text-sky-blue text-[12px] max-sm:text-[16px]`}
           >
             SERVICES
           </p>
           <p
-            className={`${manrope.className} text-primary text-[32px] md:text-[48px] lg:text-[56px] font-normal`}
+            className={`${manrope.className}  font-bold text-primary text-[32px] md:text-[48px] lg:text-[56px]`}
           >
             What We Do
           </p>
@@ -74,14 +81,14 @@ const OurServices = () => {
         {currentIndex > 0 && (
           <button
             onClick={goPrev}
-            className="absolute left-3 z-10  hidden md:flex items-center justify-center transition cursor-pointer"
+            className="absolute left-3 z-10  md:flex items-center justify-center transition cursor-pointer"
           >
             <SlideLeftIcon />
           </button>
         )}
 
         {/* Sliding Services Container */}
-        <div className="overflow-hidden w-full max-w-[1005px]">
+        <div className="overflow-hidden min-w-[350px] w-full max-w-[1005px]">
           <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -104,7 +111,7 @@ const OurServices = () => {
         {currentIndex < totalServices - 1 && (
           <button
             onClick={goNext}
-            className="absolute right-3 z-10 hidden md:flex items-center justify-center transition cursor-pointer"
+            className="absolute right-3 z-10 md:flex items-center justify-center transition cursor-pointer"
           >
             <SlideRightIcon />
           </button>

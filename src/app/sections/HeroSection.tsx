@@ -7,6 +7,7 @@ import { manrope, baskervville } from "@/app/fonts";
 import { Button } from "@heroui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -31,7 +32,7 @@ const HeroSection = () => {
               </p>
             </motion.div>
 
-            <div className="flex flex-col items-center justify-center text-center max-w-[850px] gap-[18px]">
+            <div className="flex flex-col items-center justify-center text-center max-w-[850px] gap-5">
               {/* Heading Section */}
               <motion.h1
                 initial={{ x: -600, opacity: 0 }}
@@ -79,7 +80,7 @@ const HeroSection = () => {
               className="relative flex items-center justify-center"
             >
               <div
-                className="absolute bottom-[10px] md:bottom-0 left-[-80px] md:left-[-90px] lg:left-[-100px] mb-10 md:mb-5 lg:mb-0  w-[56px] h-[56px] md:w-[65px] md:h-[65px] lg:w-[85px] lg:h-[85px] 
+                className="absolute bottom-[10px] md:bottom-0 left-[-70px] md:left-[-90px] lg:left-[-100px] mb-10 md:mb-5 lg:mb-0  w-[56px] h-[56px] md:w-[65px] md:h-[65px] lg:w-[85px] lg:h-[85px] 
              lg:rotate-0 md:rotate-[5deg] rotate-[19deg] transition-all duration-300"
               >
                 <TwistedArrowIcon />
@@ -89,7 +90,7 @@ const HeroSection = () => {
                 endContent={<ArrowIcon />}
                 className={`${manrope.className} bg-sky-blue rounded-full flex gap-1 items-center justify-center text-white text-[12px] md:text-[14px] py-[10px] md:py-[16px] px-[20px] cursor-pointer`}
               >
-                Start Your Transformation
+                <Link href="#contact-us">Start Your Transformation</Link>
               </Button>
             </motion.div>
           </div>

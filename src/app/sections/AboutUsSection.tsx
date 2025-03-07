@@ -10,34 +10,39 @@ import ValuesAndPrinciples from "@/components/ValuesAndPrinciplesSection";
 
 const AboutUs = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center gap-16 md:gap-12">
-      {/* About Us Heading Section */}
-      <div className="absolute flex justify-end right-0 top-0">
-        <Image
-          src={`/images/dots.svg`}
-          alt="dots"
-          width={140}
-          height={140}
-          className="w-[100px] h-[140px] md:w-[140px] md:h-[200px] "
-        />
-      </div>
+    <div
+      id="about-us"
+      className="relative flex flex-col items-center justify-center  md:gap-6"
+    >
       <motion.div
-        className="flex flex-col items-center justify-center"
+        className="flex flex-col items-center justify-center z-40"
         initial={{ opacity: 0, y: 100 }} // Start from below and invisible
         animate={{ opacity: 1, y: 0 }} // Animate to visible and normal position
         transition={{ duration: 0.8, ease: "easeOut" }} // Smooth timing
       >
+        {/* About Us Heading Section */}
+        <div className="absolute flex justify-end right-0 top-0 max-md:mt-16 -z-50">
+          <Image
+            src={`/images/dots.svg`}
+            alt="dots"
+            width={140}
+            height={140}
+            className="w-[100px] h-[140px] md:w-[140px] md:h-[200px] "
+          />
+        </div>
         <p
-          className={` ${clashSemibold.className} text-[56px] md:text-[96px] lg:text-[128px] bg-gradient-to-b from-[#2222221a] to-[#2222220] bg-clip-text text-transparent`}
+          className={` ${clashSemibold.className} z-40 text-[56px] md:text-[96px] lg:text-[128px] bg-gradient-to-b from-[#2222221a] to-[#2222220] bg-clip-text text-transparent`}
         >
           About Us
         </p>
         <div className="flex flex-col px-4 items-center justify-center gap-1">
-          <p className={`${gilroyBold.className} text-sky-blue text-[16px]`}>
+          <p
+            className={`${gilroyBold.className} font-normal text-sky-blue text-[16px]`}
+          >
             WHO WE ARE
           </p>
           <p
-            className={`${manrope.className} text-primary text-center text-[28px] md:text-[36px] lg:text-[48px] max-w-[600px] font-normal`}
+            className={`${manrope.className} font-bold text-primary text-center text-[28px] md:text-[36px] lg:text-[48px] max-w-[600px]`}
           >
             Your Partners in Progress
           </p>
@@ -56,10 +61,10 @@ const AboutUs = () => {
       </div>
 
       {/* Rotating Spinner and Content Section */}
-      <div className="flex flex-col md:flex-row items-center md:justify-between justify-center gap-24 md:mb-20 px-8 max-w-[900px]">
+      <div className="flex flex-col md:flex-row items-center md:justify-between justify-center gap-8 md:mb-8 px-4 max-w-[1000px]">
         {/* Rotating Spinner from Left */}
         <motion.div
-          className="md:w-1/2 w-full flex items-center justify-center"
+          className="md:w-1/2 w-full flex items-center  justify-center"
           initial={{ opacity: 0, x: -600 }} // Start from left with opacity 0
           animate={{ opacity: 1, x: 0 }} // Animate to normal position
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -69,7 +74,7 @@ const AboutUs = () => {
 
         {/* Content Section from Right */}
         <motion.div
-          className="md:w-1/2 w-full flex flex-col items-center justify-start px-4 gap-8"
+          className="md:w-1/2 w-full flex flex-col items-center justify-start  gap-8"
           initial={{ opacity: 0, x: 600 }} // Start from right with opacity 0
           animate={{ opacity: 1, x: 0 }} // Animate to normal position
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -91,7 +96,7 @@ const AboutUs = () => {
           <div className="flex mt-auto md:self-start self-center">
             <Button
               endContent={<ArrowIcon />}
-              className="bg-primary text-white py-[10px] px-[24px] rounded-full flex justify-start cursor-pointer"
+              className={`font-semibold bg-primary text-white py-[10px] px-6 rounded-full flex justify-start cursor-pointer `}
             >
               Contact Us
             </Button>
