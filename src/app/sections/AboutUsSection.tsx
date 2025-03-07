@@ -30,6 +30,27 @@ const AboutUs = () => {
             className="w-[100px] h-[140px] md:w-[140px] md:h-[200px] "
           />
         </div>
+        
+    <div
+      id="about-us"
+      className="relative flex flex-col items-center justify-center  md:gap-6"
+    >
+      <motion.div
+        className="flex flex-col items-center justify-center z-40"
+        initial={{ opacity: 0, y: 100 }} // Start from below and invisible
+        animate={{ opacity: 1, y: 0 }} // Animate to visible and normal position
+        transition={{ duration: 0.8, ease: "easeOut" }} // Smooth timing
+      >
+        {/* About Us Heading Section */}
+        <div className="absolute flex justify-end right-0 top-0 max-md:mt-16 -z-50">
+          <Image
+            src={`/images/dots.svg`}
+            alt="dots"
+            width={140}
+            height={140}
+            className="w-[100px] h-[140px] md:w-[140px] md:h-[200px] "
+          />
+        </div>
         <p
           className={` ${clashMedium.className} font-medium z-40 text-[52px] md:text-[96px] lg:text-[138px] bg-gradient-to-b from-[#2222221a] to-[#2222220] bg-clip-text text-transparent`}
         >

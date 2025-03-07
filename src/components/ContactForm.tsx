@@ -1,12 +1,12 @@
-"use client"; // If using Next.js App Router
+"use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@heroui/button";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
-    location: "",
+    name: "",
     phone: "",
     email: "",
     message: "",
@@ -14,6 +14,17 @@ export default function ContactForm() {
 
   const [loading, setLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
+
+  // Automatically hide the response message after 4 seconds
+  useEffect(() => {
+    if (responseMessage) {
+      const timer = setTimeout(() => {
+        setResponseMessage("");
+      }, 4000); // 4 seconds
+
+      return () => clearTimeout(timer); // Cleanup function
+    }
+  }, [responseMessage]);
 
   // Handle input changes
   const handleChange = (
@@ -27,6 +38,8 @@ export default function ContactForm() {
     e.preventDefault();
     setLoading(true);
     setResponseMessage("");
+
+    console.log("This is form data", formData);
 
     try {
       const res = await fetch("/api/contacts", {
@@ -42,13 +55,9 @@ export default function ContactForm() {
       if (!res.ok) throw new Error(data.message || "Something went wrong.");
 
       setResponseMessage("Form submitted successfully!");
-      setFormData({ location: "", phone: "", email: "", message: "" }); // Clear form
-    } catch (error: unknown) {
-      if (error instanceof Error) {
-        setResponseMessage(error.message);
-      } else {
-        setResponseMessage("An unknown error occurred.");
-      }
+      setFormData({ name: "", phone: "", email: "", message: "" }); // Clear form
+    } catch (error) {
+      setResponseMessage("Please try again later.");
     } finally {
       setLoading(false);
     }
@@ -67,19 +76,15 @@ export default function ContactForm() {
       >
         {/* Information about required fields */}
         <div className="w-full flex flex-col justify-center gap-4">
-          <p className="text-center text-[#8994A3] text-sm">
-            Fields with <span className="text-[#708DFF]">*</span> are required
-          </p>
-
           {/* Input Fields */}
           <div className="flex flex-col text-sm w-full gap-6">
             <input
-              id="location"
+              id="name"
               type="text"
-              placeholder="Location*"
-              value={formData.location}
+              placeholder="Name*"
+              value={formData.name}
               onChange={handleChange}
-              className="border-[1px] border-[#FFFFFF40] py-4 px-5 rounded-full placeholder:text-[#B7BEC7] bg-light-blue-black w-full focus:outline-none focus:ring-2 focus:ring-sky-blue cursor-text relative"
+              className="border-[1px] border-[#FFFFFF40] py-4 px-5 rounded-2xl placeholder:text-[#B7BEC7] bg-light-blue-black w-full focus:outline-none focus:ring-2 focus:ring-sky-blue cursor-text relative"
               required
             />
 
@@ -99,7 +104,7 @@ export default function ContactForm() {
               placeholder="Email*"
               value={formData.email}
               onChange={handleChange}
-              className="border-[1px] border-[#FFFFFF40] py-4 px-5 rounded-full placeholder:text-[#B7BEC7] bg-light-blue-black w-full focus:outline-none focus:ring-2 focus:ring-sky-blue cursor-text relative"
+              className="border-[1px] border-[#FFFFFF40] py-4 px-5 rounded-2xl placeholder:text-[#B7BEC7] bg-light-blue-black w-full focus:outline-none focus:ring-2 focus:ring-sky-blue cursor-text relative"
               required
             />
 
@@ -119,7 +124,7 @@ export default function ContactForm() {
         <div className="flex items-center justify-center w-full">
           <Button
             type="submit"
-            className="text-white bg-sky-blue py-3 px-6 w-7/8 rounded-full flex justify-center cursor-pointer hover:bg-opacity-90 transition"
+            className="text-white bg-sky-blue py-3 px-6 w-7/8 rounded-2xl flex justify-center cursor-pointer hover:bg-opacity-90 transition disabled:opacity-70"
             disabled={loading}
           >
             {loading ? "Submitting..." : "Submit"}
@@ -128,7 +133,7 @@ export default function ContactForm() {
 
         {/* Response Message */}
         {responseMessage && (
-          <p className="text-center text-sm text-white mt-2">
+          <p className="text-center font-semibold text-white ">
             {responseMessage}
           </p>
         )}
