@@ -5,7 +5,6 @@ import Approach from "@/components/Approach";
 import Image from "next/image";
 import { motion } from "framer-motion"; // Import motion from framer-motion
 import { approachSteps } from "@/data/approachesData";
-import { approachSteps } from "@/data/approachesData";
 
 const OurApproach = () => {
   return (

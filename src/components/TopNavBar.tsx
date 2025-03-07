@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import React, { useState, useEffect } from "react";
 import { Button } from "@heroui/button";
 import { gilroyBold, gilroyMedium, gilroySemiBold } from "@/app/fonts";
 import { ArrowIcon, HamburgerIcon } from "./Icons";
@@ -40,15 +39,7 @@ const TopNavBar = () => {
     return () => document.removeEventListener("click", handleClickOutside);
   }, [isMenuOpen]);
 
-  const navMenu = [
-    { label: "Services", sectionId: "#services" },
-    { label: "Our Approach", sectionId: "#our-approach" },
-    { label: "About Us", sectionId: "#about-us" },
-    { label: "Contact Us", sectionId: "#contact-us" },
-  ];
-
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+ 
 
   // Close menu when clicking outside
   useEffect(() => {
@@ -132,7 +123,6 @@ const TopNavBar = () => {
         <Button
           endContent={<ArrowIcon />}
           className="bg-primary font-semibold text-white py-[10px] px-6 rounded-full flex cursor-pointer"
-          className="bg-primary font-semibold text-white py-[10px] px-6 rounded-full flex cursor-pointer"
         >
           <Link href="#contact-us">Contact Us</Link>
           <Link href="#contact-us">Contact Us</Link>
@@ -168,7 +158,7 @@ const TopNavBar = () => {
             ))}
           </motion.div>
         )}
-
+</div>
       {/* Mobile Menu Toggle */}
       <div className="block md:hidden relative">
         <div

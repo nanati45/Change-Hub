@@ -1,23 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { transporter, mailOptions } from "@/config/nodemailer";
-<<<<<<< HEAD
-import { contactSchema } from "@/app/ValidationSchema";
-=======
->>>>>>> 9bbd1be314f67557fe723e9e0b805327fc9f8e64
 
 export async function POST(request: NextRequest) {
   try {
     // 1. Parse the request body as JSON
     const body = await request.json();
 
-<<<<<<< HEAD
-    // 2. Validate incoming data with Zod
-    const validationResult = contactSchema.safeParse(body);
-    if (!validationResult.success) {
-      const errorMessage = validationResult.error.issues[0].message;
-      return NextResponse.json(
-        { success: false, message: errorMessage },
-=======
     console.log("This is body", body);
 
     // 2. Validate incoming data with Zod
@@ -39,31 +27,16 @@ export async function POST(request: NextRequest) {
     } else if (body.email && !body.email.includes("@")) {
       return NextResponse.json(
         { success: false, message: "Invalid email address" },
->>>>>>> 9bbd1be314f67557fe723e9e0b805327fc9f8e64
         { status: 400 }
       );
     }
 
-<<<<<<< HEAD
-    const { name, email, phone, message } = validationResult.data;
-=======
     const { name, email, phone, message } = body;
->>>>>>> 9bbd1be314f67557fe723e9e0b805327fc9f8e64
 
     // 3. Compose the email message
     const emailOptions = {
       ...mailOptions,
       subject: "New Contact Form Submission",
-<<<<<<< HEAD
-      text: `
-New Contact Submission:
-
-Name: ${name} 
-Email: ${email}
-Phone: ${phone || "N/A"}
-Message: ${message || "N/A"}
-      `.trim(),
-=======
       html: `
     <div style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
       <div style="max-width: 600px; background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: auto;">
@@ -82,7 +55,6 @@ Message: ${message || "N/A"}
       </div>
     </div>
   `.trim(),
->>>>>>> 9bbd1be314f67557fe723e9e0b805327fc9f8e64
     };
 
     // 4. Send the email
