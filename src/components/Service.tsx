@@ -94,7 +94,7 @@ const Service: React.FC<ServicesProps> = ({
       <div className="lg:hidden mt-4">
         <Button
           endContent={<ArrowIcon />}
-          className="bg-primary text-white py-[10px] px-[24px] rounded-full flex cursor-pointer"
+          className="bg-primary font-semibold text-white py-[10px] px-[24px] rounded-full flex cursor-pointer"
         >
           Contact Us
         </Button>
