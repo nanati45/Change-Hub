@@ -5,7 +5,10 @@ import ContactDetails from "@/components/ContactDetails";
 
 const ContactUs = () => {
   return (
-    <div className="flex flex-col items-center bg-dark-blue relative  w-full">
+    <div
+      id="contact-us"
+      className="flex flex-col items-center bg-dark-blue relative  w-full"
+    >
       <div className="absolute right-0  opacity-3 mix-blend-exclusion w-full h-full ">
         <Image
           src="/images/liquid-bg-unscreen.gif"

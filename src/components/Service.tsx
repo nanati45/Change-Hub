@@ -39,7 +39,7 @@ const Service: React.FC<ServicesProps> = ({
         <div className="hidden lg:flex mt-auto self-start">
           <Button
             endContent={<ArrowIcon />}
-            className="bg-primary text-white py-[10px] px-[24px] rounded-full flex justify-start cursor-pointer"
+            className="bg-primary font-semibold text-white py-[10px] px-[24px] rounded-full flex justify-start cursor-pointer"
           >
             {details.title}
           </Button>
@@ -56,7 +56,7 @@ const Service: React.FC<ServicesProps> = ({
             className="rounded-3xl w-full h-full object-cover"
           />
         </div>
-        <div className="w-[345px] h-[240px] md:hidden flex rounded-full">
+        <div className="sm:w-[345px] sm:h-[240px] w-[300px] h-[200px] md:hidden flex rounded-full">
           <Image
             src={`/images/discuss2.webp`}
             alt="a woman rating 5 stars on a customer service machine"

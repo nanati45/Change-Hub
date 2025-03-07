@@ -1,0 +1,138 @@
+"use client"; // If using Next.js App Router
+
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Button } from "@heroui/button";
+
+export default function ContactForm() {
+  const [formData, setFormData] = useState({
+    location: "",
+    phone: "",
+    email: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [responseMessage, setResponseMessage] = useState("");
+
+  // Handle input changes
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setResponseMessage("");
+
+    try {
+      const res = await fetch("/api/contacts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) throw new Error(data.message || "Something went wrong.");
+
+      setResponseMessage("Form submitted successfully!");
+      setFormData({ location: "", phone: "", email: "", message: "" }); // Clear form
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        setResponseMessage(error.message);
+      } else {
+        setResponseMessage("An unknown error occurred.");
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <motion.div
+      className="relative w-full md:w-1/2 text-gray-text border-[1px] backdrop-blur-[50px] p-10 bg-gradient-to-b from-[#322D5A] to-[#322D5ABF] bg-clip-text border-white-border rounded-[40px]"
+      initial={{ x: "100%", opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+    >
+      <form
+        onSubmit={handleSubmit}
+        className="flex w-full justify-center items-center flex-col gap-10 "
+      >
+        {/* Information about required fields */}
+        <div className="w-full flex flex-col justify-center gap-4">
+          <p className="text-center text-[#8994A3] text-sm">
+            Fields with <span className="text-[#708DFF]">*</span> are required
+          </p>
+
+          {/* Input Fields */}
+          <div className="flex flex-col text-sm w-full gap-6">
+            <input
+              id="location"
+              type="text"
+              placeholder="Location*"
+              value={formData.location}
+              onChange={handleChange}
+              className="border-[1px] border-[#FFFFFF40] py-4 px-5 rounded-full placeholder:text-[#B7BEC7] bg-light-blue-black w-full focus:outline-none focus:ring-2 focus:ring-sky-blue cursor-text relative"
+              required
+            />
+
+            <input
+              id="phone"
+              type="tel"
+              placeholder="Phone number*"
+              value={formData.phone}
+              onChange={handleChange}
+              className="border-[1px] border-[#FFFFFF40] py-4 px-5 rounded-full placeholder:text-[#B7BEC7] bg-light-blue-black w-full focus:outline-none focus:ring-2 focus:ring-sky-blue cursor-text relative"
+              required
+            />
+
+            <input
+              id="email"
+              type="email"
+              placeholder="Email*"
+              value={formData.email}
+              onChange={handleChange}
+              className="border-[1px] border-[#FFFFFF40] py-4 px-5 rounded-full placeholder:text-[#B7BEC7] bg-light-blue-black w-full focus:outline-none focus:ring-2 focus:ring-sky-blue cursor-text relative"
+              required
+            />
+
+            <textarea
+              id="message"
+              placeholder="Your message*"
+              rows={4}
+              value={formData.message}
+              onChange={handleChange}
+              className="border-[1px] border-[#FFFFFF40] py-4 px-5 rounded-[20px] placeholder:text-[#B7BEC7] bg-light-blue-black w-full focus:outline-none focus:ring-2 focus:ring-sky-blue cursor-text relative resize-none"
+              required
+            />
+          </div>
+        </div>
+
+        {/* Submit Button */}
+        <div className="flex items-center justify-center w-full">
+          <Button
+            type="submit"
+            className="text-white bg-sky-blue py-3 px-6 w-7/8 rounded-full flex justify-center cursor-pointer hover:bg-opacity-90 transition"
+            disabled={loading}
+          >
+            {loading ? "Submitting..." : "Submit"}
+          </Button>
+        </div>
+
+        {/* Response Message */}
+        {responseMessage && (
+          <p className="text-center text-sm text-white mt-2">
+            {responseMessage}
+          </p>
+        )}
+      </form>
+    </motion.div>
+  );
+}

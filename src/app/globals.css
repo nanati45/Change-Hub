@@ -29,6 +29,8 @@
   --color-gray-text: #8994a3;
   --color-blue-black: #090a0ecc;
   --color-grey: #888888;
+  --color-light-blue-black: #48456b;
+
   --color-white-fade: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.07) 0%,
@@ -73,6 +75,17 @@
     #fff 100%
   );
 
+  --color-white-border: linear-gradient(
+    137.57deg,
+    rgba(255, 255, 255, 0.75) 1.99%,
+    rgba(255, 255, 255, 0) 51.67%
+  );
+  --color-blue-box :{ linear-gradient(
+      309.38deg,
+      rgba(50, 45, 90, 0.5) 2.92%,
+      rgba(50, 45, 90, 0.375) 96.52%
+    );
+  }
   --breakpoint-mid: "744px";
 }
 
@@ -106,4 +119,11 @@
     rgba(255, 255, 255, 0.15) 50%,
     rgba(255, 255, 255, 0.0375) 100%
   );
+}
+
+@media (max-width: 768px) {
+  .image-bg {
+    background-size: 100% 60% !important; /* 60% of height for smaller screens */
+    background-position: bottom center !important;
+  }
 }
