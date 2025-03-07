@@ -49,6 +49,7 @@ const Service: React.FC<ServicesProps> = ({
         {/* Image container with full height */}
         <div className="hidden md:block w-[395px] h-full rounded-full">
           <Image
+            loading="eager"
             src={imageURL}
             alt="a woman rating 5 stars on a customer service machine"
             width={261}
@@ -58,6 +59,7 @@ const Service: React.FC<ServicesProps> = ({
         </div>
         <div className="sm:w-[345px] sm:h-[240px] w-[300px] h-[200px] md:hidden flex rounded-full">
           <Image
+            loading="eager"
             src={`/images/discuss2.webp`}
             alt="a woman rating 5 stars on a customer service machine"
             width={395}

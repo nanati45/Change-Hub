@@ -23,6 +23,7 @@ const AboutUs = () => {
         {/* About Us Heading Section */}
         <div className="absolute flex justify-end right-0 top-0 max-md:mt-16 -z-50">
           <Image
+            loading="eager"
             src={`/images/dots.svg`}
             alt="dots"
             width={140}
@@ -52,6 +53,7 @@ const AboutUs = () => {
       {/* Dots on Left */}
       <div className="absolute flex left-0 top-1/4 self-start">
         <Image
+          loading="eager"
           src={`/images/dots.svg`}
           alt="dots"
           width={140}
@@ -107,6 +109,7 @@ const AboutUs = () => {
       {/* Dots on Right */}
       <div className="lg:top-1/2 bottom-0 block absolute inset-y-0 right-0 md:top-1/2 top-full  ">
         <Image
+          loading="eager"
           src={`/images/dots3.svg`}
           alt="dots"
           width={230}

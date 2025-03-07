@@ -32,6 +32,7 @@ const SendEmail = () => {
         <div className="flex flex-col md:flex-row items-center justify-start gap-4">
           <div className="flex items-center justify-start shrink-0">
             <Image
+              loading="eager"
               src={`/images/contact.webp`}
               alt="contact"
               width={115}

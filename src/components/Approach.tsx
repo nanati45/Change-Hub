@@ -52,6 +52,7 @@ const Approach: FC<ApproachProps> = ({
       {imageURL1 && (
         <div className="hidden lg:block absolute bottom-0 right-0 top-0  w-full h-full bg-overlay mix-blend-darken  justify-end">
           <Image
+            loading="eager"
             src={imageURL1}
             alt="approach symbol"
             width={500}
@@ -61,8 +62,9 @@ const Approach: FC<ApproachProps> = ({
         </div>
       )}
       {imageURL2 && (
-        <div className="block lg:hidden absolute bottom-0 right-0 left-0  w-full h-full bg-overlay mix-blend-darken  justify-baseline">
+        <div className="block lg:hidden  absolute bottom-0 right-0 left-0  w-full h-full bg-overlay mix-blend-darken  justify-baseline">
           <Image
+            loading="eager"
             src={imageURL2}
             alt="approach symbol"
             width={300}

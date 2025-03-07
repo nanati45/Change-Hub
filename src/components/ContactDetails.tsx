@@ -41,6 +41,7 @@ const ContactDetails = () => {
         >
           <div>
             <Image
+              loading="eager"
               src={`/images/logo.svg`}
               alt="change hub logo"
               width={40}
@@ -95,6 +96,7 @@ const ContactDetails = () => {
         >
           <div>
             <Image
+              loading="eager"
               src={`/images/logo.svg`}
               alt="change hub logo"
               width={40}
@@ -126,6 +128,7 @@ const ContactDetails = () => {
             <div className="flex items-center gap-3 w-full">
               <div className="flex-shrink-0">
                 <Image
+                  loading="eager"
                   src={`/images/location.svg`}
                   alt="location"
                   width={24}
@@ -150,6 +153,7 @@ const ContactDetails = () => {
             <div className="flex items-center gap-3 w-full">
               <div className="flex-shrink-0">
                 <Image
+                  loading="eager"
                   src={`/images/call.svg`}
                   alt="call"
                   width={24}
@@ -174,6 +178,7 @@ const ContactDetails = () => {
             <div className="flex items-center gap-3 w-full">
               <div className="flex-shrink-0">
                 <Image
+                  loading="eager"
                   src={`/images/message.svg`}
                   alt="call"
                   width={24}

@@ -103,6 +103,7 @@ const HeroSection = () => {
             className="flex flex-row items-center justify-center px-2 py-1 gap-3 md:gap-6 w-[350px] max-w-[1112px] md:w-[830px]"
           >
             <Image
+              loading="eager"
               src="/images/image.webp"
               alt="people discussing"
               width={330}
@@ -110,6 +111,7 @@ const HeroSection = () => {
               className="w-[105px] h-[105px] sm:w-[156px] sm:h-[156px] md:w-[196px] md:h-[196px] lg:w-[310px] lg:h-[310px]"
             />
             <Image
+              loading="eager"
               src="/images/image1.webp"
               alt="people interviewing"
               width={330}
@@ -117,6 +119,7 @@ const HeroSection = () => {
               className="w-[105px] h-[105px] sm:w-[156px] sm:h-[156px] md:w-[196px] md:h-[196px] lg:w-[310px] lg:h-[310px]"
             />
             <Image
+              loading="eager"
               src="/images/image2.webp"
               alt="a man working"
               width={330}

@@ -15,6 +15,7 @@ const OurApproach = () => {
       {/* Background Blob */}
       <div className="absolute left-0 top-3/4 -translate-y-1/2 max-md:hidden pointer-events-none">
         <Image
+          loading="eager"
           src="/images/blob.svg"
           alt="shadow"
           width={100}
@@ -50,6 +51,7 @@ const OurApproach = () => {
       </motion.div>
       <div className="hidden sm:block absolute inset-y-0 right-0 items-start">
         <Image
+          loading="eager"
           src={`/images/dots.svg`}
           alt="dots"
           width={140}

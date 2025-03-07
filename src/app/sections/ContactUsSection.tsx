@@ -11,6 +11,7 @@ const ContactUs = () => {
     >
       <div className="absolute right-0  opacity-3 mix-blend-exclusion w-full h-full ">
         <Image
+          loading="eager"
           src="/images/liquid-bg-unscreen.gif"
           alt="bg"
           fill

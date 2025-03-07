@@ -24,7 +24,13 @@ const RotatingSpinner = () => {
           animate={{ rotate: -360 }}
           transition={{ repeat: Infinity, duration: 50, ease: "linear" }}
         >
-          <Image src="/images/spinner1.webp" alt="1" width={47} height={47} />
+          <Image
+            loading="eager"
+            src="/images/spinner1.webp"
+            alt="1"
+            width={47}
+            height={47}
+          />
         </motion.div>
 
         {/* Image 3 (Bottom left) */}
@@ -33,7 +39,13 @@ const RotatingSpinner = () => {
           animate={{ rotate: -360 }}
           transition={{ repeat: Infinity, duration: 50, ease: "linear" }}
         >
-          <Image src="/images/spinner3.webp" alt="3" width={50} height={50} />
+          <Image
+            loading="eager"
+            src="/images/spinner3.webp"
+            alt="3"
+            width={50}
+            height={50}
+          />
         </motion.div>
 
         {/* Image 4 (Bottom Right) */}
@@ -42,7 +54,13 @@ const RotatingSpinner = () => {
           animate={{ rotate: -360 }}
           transition={{ repeat: Infinity, duration: 50, ease: "linear" }}
         >
-          <Image src="/images/spinner4.webp" alt="4" width={50} height={50} />
+          <Image
+            loading="eager"
+            src="/images/spinner4.webp"
+            alt="4"
+            width={50}
+            height={50}
+          />
         </motion.div>
       </motion.div>
 
@@ -65,13 +83,20 @@ const RotatingSpinner = () => {
           animate={{ rotate: -360 }}
           transition={{ repeat: Infinity, duration: 50, ease: "linear" }}
         >
-          <Image src="/images/spinner1.webp" alt="1" width={38} height={38} />
+          <Image
+            loading="eager"
+            src="/images/spinner1.webp"
+            alt="1"
+            width={38}
+            height={38}
+          />
         </motion.div>
       </motion.div>
 
       {/* Center Image */}
       <div className="absolute w-[50%] h-[50%] flex items-center justify-center rounded-full">
         <Image
+          loading="eager"
           src="/images/Mask-group.webp"
           alt="center"
           width={220}

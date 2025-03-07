@@ -69,6 +69,7 @@ const TopNavBar = () => {
       <div className={`${gilroyBold.className} max-md:scale-70 scale-90`}>
         <div>
           <Image
+            loading="eager"
             src={`/images/logo.svg`}
             alt="change hub logo"
             width={40}
