@@ -7,7 +7,7 @@ const ContactUs = () => {
   return (
     <div
       id="contact-us"
-      className="flex flex-col items-center bg-dark-blue relative  w-full"
+      className="flex flex-col items-center bg-dark-blue relative overflow-x-hidden w-full"
     >
       <div className="absolute right-0  opacity-3 mix-blend-exclusion w-full h-full ">
         <Image

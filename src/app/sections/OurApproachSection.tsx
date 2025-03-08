@@ -10,7 +10,7 @@ const OurApproach = () => {
   return (
     <div
       id="our-approach"
-      className="relative flex flex-col items-center justify-center mb-8"
+      className="relative flex flex-col overflow-x-hidden items-center justify-center mb-8"
     >
       {/* Background Blob */}
       <div className="absolute left-0 top-3/4 -translate-y-1/2 max-md:hidden pointer-events-none">

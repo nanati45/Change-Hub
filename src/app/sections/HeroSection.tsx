@@ -11,7 +11,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <div className="h-full mb-10 sm:mb-22 md:mb-55 lg:mb-60">
+    <div className="h-full mb-10 sm:mb-22 md:mb-55 lg:mb-60 ">
       <div className="h-screen bg-[url('/images/abstract-bg.svg')] bg-cover bg-transparent bg-start flex flex-col gap-4 w-full pt-36 md:pt-42">
         <div className="flex flex-col items-center justify-center gap-[26px]">
           <div className="flex flex-col items-center justify-center gap-[26px] w-[350px] md:w-[760px] lg:[830px]">
