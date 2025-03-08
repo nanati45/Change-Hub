@@ -18,7 +18,8 @@ const HeroSection = () => {
             {/* Welcome Section */}
             <motion.div
               initial={{ y: -50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.8 }}
               className={`${gilroyMedium.className} flex gap-2 items-center justify-center py-[4px] pl-[5px] pr-[16px] bg-[#F6F6F6] border-border2 border-[0.89px] rounded-full shadow-custom`}
             >
@@ -35,9 +36,9 @@ const HeroSection = () => {
             <div className="flex flex-col items-center justify-center text-center max-w-[850px] gap-5">
               {/* Heading Section */}
               <motion.h1
-                initial={{ x: -600, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
                 className={`${manrope.className} text-[40px] lg:text-[64px] md:text-[58px] font-bold w-full px-2`}
               >
                 Lead the Change. Shape the{" "}
@@ -60,8 +61,9 @@ const HeroSection = () => {
 
               {/* Paragraph Section */}
               <motion.p
-                initial={{ x: 600, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
+                initial={{ x: 100, opacity: 0 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className={`${gilroyRegular.className} flex items-center justify-center text-center w-full px-8 md:px-12 text-[16px]`}
               >
@@ -75,7 +77,8 @@ const HeroSection = () => {
             {/* Button & Twisted Arrow */}
             <motion.div
               initial={{ y: 100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.8, delay: 0.9 }}
               className="relative flex items-center justify-center"
             >
@@ -98,8 +101,9 @@ const HeroSection = () => {
           {/* Images Section */}
           <motion.div
             initial={{ y: 100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-row items-center justify-center px-2 py-1 gap-3 md:gap-6 w-[350px] max-w-[1112px] md:w-[830px]"
           >
             <Image

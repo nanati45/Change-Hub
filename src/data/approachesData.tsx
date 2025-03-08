@@ -12,7 +12,6 @@ export const approachSteps = [
       </p>
     ),
     imageURL1: "",
-    animation: { x: -100 }, // Left animation
   },
   {
     number: "02",
@@ -26,9 +25,8 @@ export const approachSteps = [
         with your business goals.
       </p>
     ),
-    imageURL1: "/images/businessPlan.svg",
+    imageURL1: "/images/businessplan.svg",
     imageURL2: "/images/businessSm.svg",
-    animation: { x: 100 }, // Right animation
   },
   {
     number: "03",
@@ -46,7 +44,6 @@ export const approachSteps = [
     ),
     imageURL1: "/images/target2.svg",
     imageURL2: "/images/targetSm.svg",
-    animation: { x: -100 }, // Left animation
   },
   {
     number: "04",
@@ -59,6 +56,5 @@ export const approachSteps = [
       </p>
     ),
     imageURL1: "",
-    animation: { x: 100 }, // Right animation
   },
 ];

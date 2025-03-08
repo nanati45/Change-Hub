@@ -66,8 +66,9 @@ export default function ContactForm() {
   return (
     <motion.div
       className="relative w-full md:w-1/2 text-gray-text border-[1px] backdrop-blur-[50px] p-10 bg-gradient-to-b from-[#322D5A] to-[#322D5ABF] bg-clip-text border-white-border rounded-[40px]"
-      initial={{ x: "100%", opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
+      initial={{ x: 100, opacity: 0 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 1, ease: "easeOut" }}
     >
       <form

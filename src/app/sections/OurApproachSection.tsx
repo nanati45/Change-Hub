@@ -27,8 +27,9 @@ const OurApproach = () => {
       {/* Approach Title and Text with Animation */}
       <motion.div
         className="flex flex-col items-center justify-center"
-        initial={{ opacity: 0, y: 50 }} // Start from below and invisible
-        animate={{ opacity: 1, y: 0 }} // Animate to visible and normal position
+        initial={{ opacity: 0, y: 100 }} // Start from below and invisible
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.6 }}
         transition={{ duration: 0.8, ease: "easeOut" }} // Animation timing
       >
         <p
@@ -66,7 +67,8 @@ const OurApproach = () => {
         <motion.div
           className="lg:col-span-5 col-span-12 sm:col-span-6 lg:row-span-6 sm:row-span-4 row-span-2 justify-center flex"
           initial={{ opacity: 0, x: -100 }} // Start from left with opacity 0
-          animate={{ opacity: 1, x: 0 }} // Animate to normal position
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <Approach
@@ -80,7 +82,8 @@ const OurApproach = () => {
         <motion.div
           className="lg:col-span-7 col-span-12 sm:col-span-6 lg:row-span-6 sm:row-span-8 row-span-4 flex justify-center"
           initial={{ opacity: 0, x: 100 }} // Start from right with opacity 0
-          animate={{ opacity: 1, x: 0 }} // Animate to normal position
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <Approach
@@ -96,7 +99,8 @@ const OurApproach = () => {
         <motion.div
           className="lg:col-span-7 col-span-12 sm:col-span-6 lg:row-span-6 sm:row-span-8 row-span-4 flex justify-center"
           initial={{ opacity: 0, x: -100 }} // Start from left with opacity 0
-          animate={{ opacity: 1, x: 0 }} // Animate to normal position
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <Approach
@@ -112,7 +116,8 @@ const OurApproach = () => {
         <motion.div
           className="lg:col-span-5 col-span-12 sm:col-span-6 lg:row-span-6 sm:row-span-4 row-span-2 flex justify-center"
           initial={{ opacity: 0, x: 100 }} // Start from right with opacity 0
-          animate={{ opacity: 1, x: 0 }} // Animate to normal position
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <Approach

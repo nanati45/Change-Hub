@@ -25,17 +25,19 @@ const Service: React.FC<ServicesProps> = ({
 }) => {
   return (
     <div className="flex lg:flex-row flex-col gap-3 items-center justify-between">
-      <div className="flex flex-col items-center gap-[20px] py-[20px] px-[16px] text-center lg:text-left ">
-        <p
-          className={`${gilroySemiBold.className} lg:text-[36px] md:text-[30px] text-[26px] text-primary`}
-        >
-          {title}
-        </p>
-        <p
-          className={`${gilroyMedium.className} lg:text-[18px] md:text-[16px] text-[15px] text-charcoal`}
-        >
-          {description}
-        </p>
+      <div className="flex flex-col items-center lg:justify-start  gap-5 py-5 px-4 ">
+        <div className="flex flex-col lg:text-left text-center gap-5">
+          <p
+            className={`${gilroySemiBold.className} lg:text-[36px] md:text-[30px] text-[26px] text-primary`}
+          >
+            {title}
+          </p>
+          <p
+            className={`${gilroyMedium.className} lg:text-[18px] md:text-[16px] text-[15px] text-charcoal`}
+          >
+            {description}
+          </p>
+        </div>
         <div className="hidden lg:flex mt-auto self-start">
           <Button
             endContent={<ArrowIcon />}

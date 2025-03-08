@@ -6,7 +6,7 @@ import { SlideRightIcon, SlideLeftIcon } from "@/components/Icons";
 import { serviceList } from "@/data/constants";
 import { motion, useMotionValue } from "framer-motion";
 
-const DRAG_BUFFER = 50;
+const DRAG_BUFFER = 30;
 
 const OurServices = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -47,9 +47,10 @@ const OurServices = () => {
     <motion.div
       id="services"
       className="relative flex flex-col items-center justify-center w-full gap-6 pt-8"
-      initial={{ opacity: 0, y: 200 }} // Start from bottom and transparent
-      animate={{ opacity: 1, y: 0 }} // End at normal position with full opacity
-      transition={{ duration: 0.6, ease: "easeOut" }} // Animation duration and easing
+      initial={{ opacity: 0, y: 200 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <div className="flex flex-col items-center justify-center px-4">
         <p
@@ -60,7 +61,7 @@ const OurServices = () => {
 
         <div className=" flex flex-col md:-mt-8 sm:-mt-4 -mt-2 gap-3 px-4 items-center justify-center  ">
           <p
-            className={`${gilroyBold.className}  font-normal text-sky-blue text-[12px] sm:text-[14px] md:text-[16px]`}
+            className={`${gilroyBold.className} font-normal text-sky-blue text-[12px] sm:text-[14px] md:text-[16px]`}
           >
             SERVICES
           </p>
@@ -102,12 +103,7 @@ const OurServices = () => {
             style={{
               x: dragX,
             }}
-            transition={{
-              type: "spring",
-              mass: 3,
-              stiffness: 600,
-              damping: 50,
-            }}
+            transition={{ duration: 0.3 }}
             onDragStart={onDragStart}
             onDragEnd={onDragEnd}
             animate={{
@@ -119,13 +115,10 @@ const OurServices = () => {
                 key={index}
                 className="w-full flex-shrink-0 cursor-grab "
                 animate={{
-                  scale: currentIndex === index ? 0.95 : 0.85,
+                  scale: currentIndex === index ? 0.95 : 0.9,
                 }}
                 transition={{
-                  type: "spring",
-                  mass: 3,
-                  stiffness: 200,
-                  damping: 50,
+                  duration: 0.2,
                 }}
               >
                 <Service {...service} />
