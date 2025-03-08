@@ -6,7 +6,7 @@ import { SlideRightIcon, SlideLeftIcon } from "@/components/Icons";
 import { serviceList } from "@/data/constants";
 import { motion, useMotionValue } from "framer-motion";
 
-const DRAG_BUFFER = 30;
+const DRAG_BUFFER = 15;
 
 const OurServices = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
