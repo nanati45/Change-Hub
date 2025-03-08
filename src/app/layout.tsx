@@ -13,7 +13,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth ">
-      <body className="overflow-x-hidden">{children}</body>
+      <body className="overflow-x-hidden m-0 p-0 w-full h-full">
+        {children}
+      </body>
     </html>
   );
 }

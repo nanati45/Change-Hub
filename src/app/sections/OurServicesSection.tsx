@@ -46,7 +46,7 @@ const OurServices = () => {
   return (
     <motion.div
       id="services"
-      className="relative flex flex-col items-center justify-center w-full gap-6 pt-8"
+      className="relative flex flex-col items-center overflow-x-hidden justify-center w-full gap-6 pt-8"
       initial={{ opacity: 0, y: 200 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -103,7 +103,7 @@ const OurServices = () => {
             style={{
               x: dragX,
             }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.1, ease: "easeOut" }}
             onDragStart={onDragStart}
             onDragEnd={onDragEnd}
             animate={{
@@ -114,11 +114,14 @@ const OurServices = () => {
               <motion.div
                 key={index}
                 className="w-full flex-shrink-0 cursor-grab "
-                animate={{
-                  scale: currentIndex === index ? 0.95 : 0.9,
-                }}
+                animate={
+                  {
+                    // scale: currentIndex === index ? 0.95 : 0.9,
+                  }
+                }
                 transition={{
-                  duration: 0.2,
+                  duration: 0.1,
+                  ease: "easeOut",
                 }}
               >
                 <Service {...service} />

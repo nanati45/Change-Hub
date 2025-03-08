@@ -12,7 +12,7 @@ const AboutUs = () => {
   return (
     <div
       id="about-us"
-      className="relative flex flex-col items-center justify-center  md:gap-6"
+      className="relative flex flex-col items-center justify-center md:gap-6"
     >
       {/* About Us Heading Section */}
       <div className="absolute flex justify-end right-0 top-0 max-md:mt-16 -z-50">
@@ -26,7 +26,7 @@ const AboutUs = () => {
         />
       </div>
       <motion.div
-        className="flex flex-col items-center justify-center z-40"
+        className="flex flex-col items-center justify-center overflow-x-hidden z-40"
         initial={{ opacity: 0, y: 100 }} // Start from below and invisible
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
@@ -64,11 +64,11 @@ const AboutUs = () => {
       </div>
 
       {/* Rotating Spinner and Content Section */}
-      <div className="flex flex-col md:flex-row items-center md:justify-between justify-center gap-8 md:mb-8 px-4 max-w-[1000px]">
+      <div className="flex flex-col md:flex-row overflow-x-hidden  items-center md:justify-between justify-center gap-8 md:mb-8 px-4 max-w-[1000px]">
         {/* Rotating Spinner from Left */}
         <motion.div
           className="md:w-1/2 w-full flex items-center shrink  justify-center"
-          initial={{ opacity: 0, x: -200 }} // Start from left with opacity 0
+          initial={{ opacity: 0, x: -100 }} // Start from left with opacity 0
           animate={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3, ease: "easeOut" }}
@@ -79,7 +79,7 @@ const AboutUs = () => {
         {/* Content Section from Right */}
         <motion.div
           className="md:w-1/2 w-full flex flex-col items-center justify-start  gap-8"
-          initial={{ opacity: 0, x: 200 }} // Start from right with opacity 0
+          initial={{ opacity: 0, x: 100 }} // Start from right with opacity 0
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3, ease: "easeOut" }}
