@@ -47,7 +47,7 @@ const OurServices = () => {
     <motion.div
       id="services"
       className="relative flex flex-col items-center overflow-x-hidden justify-center w-full gap-6 pt-8"
-      initial={{ opacity: 0, y: 200 }}
+      initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
