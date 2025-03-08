@@ -17,7 +17,8 @@ const ContactDetails = () => {
       <motion.div
         className="flex flex-col items-center justify-center w-full"
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 1 }}
       >
         <p
@@ -30,7 +31,8 @@ const ContactDetails = () => {
       <motion.div
         className="grid grid-cols-8 md:justify-between gap-6 w-full p-4"
         initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: 1, x: 0 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 1 }}
       >
         <motion.div
@@ -60,7 +62,7 @@ const ContactDetails = () => {
 
         <motion.div
           className="flex col-span-8 sm:col-span-4 md:col-span-2 flex-col items-center sm:items-start justify-start gap-8 p-4"
-          initial={{ opacity: 0, x: -200 }}
+          initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
@@ -91,7 +93,8 @@ const ContactDetails = () => {
         <motion.div
           className="flex max-md:hidden flex-col items-center justify-start gap-8 w-full col-span-4 px-6 py-4"
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 1 }}
         >
           <div>
@@ -114,8 +117,9 @@ const ContactDetails = () => {
         {/* Right Section */}
         <motion.div
           className="flex col-span-8 sm:col-span-4 md:col-span-2 flex-col items-center justify-center sm:items-start gap-8 p-4"
-          initial={{ opacity: 0, x: 200 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 1 }}
         >
           <p
@@ -123,79 +127,81 @@ const ContactDetails = () => {
           >
             Contact Info
           </p>
-          <div className="flex flex-col items-center justify-start gap-3 w-full">
-            {/* Location */}
-            <div className="flex items-center gap-3 w-full">
-              <div className="flex-shrink-0">
-                <Image
-                  loading="eager"
-                  src={`/images/location.svg`}
-                  alt="location"
-                  width={24}
-                  height={24}
-                />
+          <div className="flex flex-col sm:text-left text-center">
+            <div className="flex flex-col items-center justify-start gap-3 w-full">
+              {/* Location */}
+              <div className="flex items-center gap-3 w-full">
+                <div className="flex-shrink-0">
+                  <Image
+                    loading="eager"
+                    src={`/images/location.svg`}
+                    alt="location"
+                    width={24}
+                    height={24}
+                  />
+                </div>
+                <div className="flex flex-col items-start gap-1 w-full">
+                  <p
+                    className={` ${gilroyMedium.className} text-[16px] font-normal text-left w-full`}
+                  >
+                    Addis Abeba, Ethiopia
+                  </p>
+                  <p
+                    className={` ${gilroyRegularItalic.className} text-left w-full`}
+                  >
+                    Address
+                  </p>
+                </div>
               </div>
-              <div className="flex flex-col items-start gap-1 w-full">
-                <p
-                  className={` ${gilroyMedium.className} text-[16px] font-normal text-left w-full`}
-                >
-                  Addis Abeba, Ethiopia
-                </p>
-                <p
-                  className={` ${gilroyRegularItalic.className} text-left w-full`}
-                >
-                  Address
-                </p>
-              </div>
-            </div>
 
-            {/* Call */}
-            <div className="flex items-center gap-3 w-full">
-              <div className="flex-shrink-0">
-                <Image
-                  loading="eager"
-                  src={`/images/call.svg`}
-                  alt="call"
-                  width={24}
-                  height={24}
-                />
+              {/* Call */}
+              <div className="flex items-center gap-3 w-full">
+                <div className="flex-shrink-0">
+                  <Image
+                    loading="eager"
+                    src={`/images/call.svg`}
+                    alt="call"
+                    width={24}
+                    height={24}
+                  />
+                </div>
+                <div className="flex flex-col items-start gap-1 w-full">
+                  <p
+                    className={` ${gilroyMedium.className} text-[16px] font-normal text-left w-full`}
+                  >
+                    +251 923 637 271
+                  </p>
+                  <p
+                    className={`${gilroyRegularItalic.className} text-left w-full`}
+                  >
+                    Mobile
+                  </p>
+                </div>
               </div>
-              <div className="flex flex-col items-start gap-1 w-full">
-                <p
-                  className={` ${gilroyMedium.className} text-[16px] font-normal text-left w-full`}
-                >
-                  +251 923 637 271
-                </p>
-                <p
-                  className={`${gilroyRegularItalic.className} text-left w-full`}
-                >
-                  Mobile
-                </p>
-              </div>
-            </div>
 
-            {/* Email */}
-            <div className="flex items-center gap-3 w-full">
-              <div className="flex-shrink-0">
-                <Image
-                  loading="eager"
-                  src={`/images/message.svg`}
-                  alt="call"
-                  width={24}
-                  height={24}
-                />
-              </div>
-              <div className="flex flex-col items-start gap-1 w-full">
-                <p
-                  className={` ${gilroyMedium.className} text-[16px] font-normal text-left w-full`}
-                >
-                  contact@Example.com
-                </p>
-                <p
-                  className={` ${gilroyRegularItalic.className} text-left w-full`}
-                >
-                  Email
-                </p>
+              {/* Email */}
+              <div className="flex items-center gap-3 w-full">
+                <div className="flex-shrink-0">
+                  <Image
+                    loading="eager"
+                    src={`/images/message.svg`}
+                    alt="call"
+                    width={24}
+                    height={24}
+                  />
+                </div>
+                <div className="flex flex-col items-start gap-1 w-full">
+                  <p
+                    className={` ${gilroyMedium.className} text-[16px] font-normal text-left w-full`}
+                  >
+                    contact@Example.com
+                  </p>
+                  <p
+                    className={` ${gilroyRegularItalic.className} text-left w-full`}
+                  >
+                    Email
+                  </p>
+                </div>
               </div>
             </div>
           </div>

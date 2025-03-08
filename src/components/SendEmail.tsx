@@ -7,12 +7,13 @@ import ContactForm from "./ContactForm";
 
 const SendEmail = () => {
   return (
-    <div className="w-full flex gap-10 md:flex-row flex-col max-w-[1109px] items-center justify-between bg-dark-blue p-4 sm:p-8 md:p-16">
+    <div className="w-full flex gap-10 md:flex-row flex-col max-w-[1109px] items-center justify-between bg-dark-blue px-4 py-6 sm:p-8 md:p-16">
       {/* Left section (Contact Us) */}
       <motion.div
         className="flex flex-col items-center w-full md:w-1/2 gap-10 justify-center md:justify-start"
-        initial={{ x: "-100%", opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
         <div>

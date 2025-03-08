@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const RotatingSpinner = () => {
   return (
-    <div className="relative flex items-center justify-center max-sm:scale-80 w-[80vw] h-[80vw] max-w-[365px] max-h-[365px] md:max-w-[400px] md:max-h-[400px] scale-[0.8] md:scale-100">
+    <div className="relative overflow-y-clip flex items-center justify-center max-sm:scale-80 w-[80vw] h-[80vw] max-w-[365px] max-h-[365px] md:max-w-[400px] md:max-h-[400px] scale-[0.8] md:scale-100">
       {/* Rotating Outer Dotted Circle */}
       <motion.div
         animate={{ rotate: 360 }}

@@ -14,23 +14,24 @@ const AboutUs = () => {
       id="about-us"
       className="relative flex flex-col items-center justify-center  md:gap-6"
     >
+      {/* About Us Heading Section */}
+      <div className="absolute flex justify-end right-0 top-0 max-md:mt-16 -z-50">
+        <Image
+          loading="eager"
+          src={`/images/dots.svg`}
+          alt="dots"
+          width={140}
+          height={140}
+          className="w-[100px] h-[140px] md:w-[140px] md:h-[200px] "
+        />
+      </div>
       <motion.div
         className="flex flex-col items-center justify-center z-40"
         initial={{ opacity: 0, y: 100 }} // Start from below and invisible
-        animate={{ opacity: 1, y: 0 }} // Animate to visible and normal position
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: "easeOut" }} // Smooth timing
       >
-        {/* About Us Heading Section */}
-        <div className="absolute flex justify-end right-0 top-0 max-md:mt-16 -z-50">
-          <Image
-            loading="eager"
-            src={`/images/dots.svg`}
-            alt="dots"
-            width={140}
-            height={140}
-            className="w-[100px] h-[140px] md:w-[140px] md:h-[200px] "
-          />
-        </div>
         <p
           className={` ${clashMedium.className} font-medium z-40 text-[52px] md:text-[96px] lg:text-[138px] bg-gradient-to-b from-[#2222221a] to-[#2222220] bg-clip-text text-transparent`}
         >
@@ -67,9 +68,10 @@ const AboutUs = () => {
         {/* Rotating Spinner from Left */}
         <motion.div
           className="md:w-1/2 w-full flex items-center shrink  justify-center"
-          initial={{ opacity: 0, x: -600 }} // Start from left with opacity 0
-          animate={{ opacity: 1, x: 0 }} // Animate to normal position
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          initial={{ opacity: 0, x: -200 }} // Start from left with opacity 0
+          animate={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
         >
           <RotatingSpinner />
         </motion.div>
@@ -77,9 +79,10 @@ const AboutUs = () => {
         {/* Content Section from Right */}
         <motion.div
           className="md:w-1/2 w-full flex flex-col items-center justify-start  gap-8"
-          initial={{ opacity: 0, x: 600 }} // Start from right with opacity 0
-          animate={{ opacity: 1, x: 0 }} // Animate to normal position
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          initial={{ opacity: 0, x: 200 }} // Start from right with opacity 0
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
         >
           <h1
             className={`${gilroyBold.className} mt-auto md:self-start self-center font-normal lg:text-[32px] md:text-[24px] text-[22px] text-primary flex gap-2 text-center md:text-left items-center justify-start`}

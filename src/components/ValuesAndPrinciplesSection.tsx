@@ -28,7 +28,8 @@ const ValuesAndPrinciples = () => {
     <motion.div
       className="flex flex-col items-center justify-center gap-12 pb-6 my-12"
       initial={{ opacity: 0, y: 100 }} // Start from below and invisible
-      animate={{ opacity: 1, y: 0 }} // Animate to visible and normal position
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8, ease: "easeOut" }} // Smooth animation
     >
       <p
